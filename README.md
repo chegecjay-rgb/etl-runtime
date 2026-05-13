@@ -1,132 +1,66 @@
-# ETL Runtime Layer
+## Foundry
 
-## Overview
-Execution Trace Normalization (ETNL) + Graph Construction Layer
+**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
 
-This repository provides a deterministic runtime layer that transforms raw Proof-of-Operation (PoO) events into a unified execution graph across heterogeneous Ethereum systems.
+Foundry consists of:
 
----
+- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
+- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
+- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
+- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
 
-## Problem
+## Documentation
 
-Different systems (Safe, Governor, Timelock, Vault):
+https://book.getfoundry.sh/
 
-- execute differently
-- emit events at different times
-- use different internal semantics
+## Usage
 
-Even with standardized schemas, execution meaning is NOT aligned.
+### Build
 
----
+```shell
+$ forge build
+```
 
-## Key Insight
+### Test
 
-Execution equivalence is defined by:
+```shell
+$ forge test
+```
 
-(target + payloadHash)
+### Format
 
-NOT:
-- systemId
-- opType
-- nonce
+```shell
+$ forge fmt
+```
 
-This allows cross-system execution unification.
+### Gas Snapshots
 
----
+```shell
+$ forge snapshot
+```
 
-## Pipeline
+### Anvil
 
-PoO Events → ETNL → NormalizedExecution → Graph (DAG)
+```shell
+$ anvil
+```
 
----
+### Deploy
 
-## Components
+```shell
+$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+```
 
-- etnl/normalize.py → Normalization layer
-- graph/build_graph.py → DAG construction layer
+### Cast
 
----
+```shell
+$ cast <subcommand>
+```
 
-## How to Run
+### Help
 
-python3 etnl/normalize.py  
-python3 graph/build_graph.py
-
----
-
-## Example
-
-### Input (PoO events)
-
-events = [
-    {
-        "systemId": "SAFE",
-        "operationId": "op1",
-        "opType": "CALL",
-        "target": "0xABC",
-        "payloadHash": "0x123",
-        "txIndex": 1
-    },
-    {
-        "systemId": "GOVERNOR",
-        "operationId": "op2",
-        "opType": "CALL",
-        "target": "0xABC",
-        "payloadHash": "0x123",
-        "proposalId": 42,
-        "callIndex": 0
-    }
-]
-
----
-
-### Output (NormalizedExecution)
-
-{
-  "executionGroupId": "same_hash",
-  "executionClass": "...",
-  "normalizedNonce": "...",
-  "causalParent": null
-}
-
----
-
-### Graph Output
-
-NODES:
-X:SAFE
-X:GOVERNOR
-X:TIMELOCK
-
-EDGES:
-GOVERNOR → TIMELOCK
-
----
-
-## Guarantees
-
-- Deterministic normalization
-- Cross-system comparability
-- Graph-safe execution grouping
-
----
-
-## Status
-
-- Schema Alignment ✔
-- Runtime Validation ✔
-- ETNL ✔
-- Graph Construction ✔
-
-Final Verdict:
-
-GRAPH CONSTRUCTION SAFE
-
----
-
-## Future Work
-
-- Real chain data ingestion
-- Visualization layer
-- Cross-protocol analytics
-
+```shell
+$ forge --help
+$ anvil --help
+$ cast --help
+```
