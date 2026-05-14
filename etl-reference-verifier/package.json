@@ -1,0 +1,8 @@
+{
+  "name": "etl-reference-verifier",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
