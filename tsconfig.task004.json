@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "types": ["node"],
+    "lib": ["ES2022"],
+    "rootDir": ".",
+    "outDir": ".task004-build"
+  },
+  "include": [
+    "ingestion/**/*.ts",
+    "normalizers/**/*.ts",
+    "verifier/**/*.ts",
+    "tests/ingestion/**/*.ts"
+  ]
+}
