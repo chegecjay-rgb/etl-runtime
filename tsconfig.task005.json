@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": ".task005-build",
+    "noEmit": false
+  },
+  "include": [
+    "reconstruction/**/*.ts",
+    "verifier/reconstruction/**/*.ts",
+    "tests/reconstruction/**/*.ts"
+  ]
+}
