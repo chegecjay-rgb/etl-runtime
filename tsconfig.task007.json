@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": ".task007-build",
+    "rootDir": ".",
+    "noEmitOnError": true
+  },
+  "include": [
+    "authority/**/*.ts",
+    "verifier/authority/**/*.ts",
+    "tests/authority/**/*.ts"
+  ]
+}
