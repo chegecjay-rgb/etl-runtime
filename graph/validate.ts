@@ -10,7 +10,7 @@ export function indexNodes(
 > {
   return new Map(
     nodes.map((node) => [
-      node.nodeId,
+      node.id,
       node,
     ])
   )

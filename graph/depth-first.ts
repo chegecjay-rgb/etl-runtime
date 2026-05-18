@@ -1,38 +1,38 @@
-export function depthFirstTraversal(
-  rootNodeId: string,
-  adjacency: ReadonlyMap<
-    string,
-    readonly string[]
-  >
-): readonly string[] {
-  const visited =
-    new Set<string>()
+import {
+  CanonicalGraphNode
+} from "./types";
 
-  const traversal: string[] = []
+export function depthFirstTraversal(
+  roots: readonly CanonicalGraphNode[],
+  adjacency: ReadonlyMap<string, readonly CanonicalGraphNode[]>
+): readonly string[] {
+  const visited = new Set<string>();
+  const ordered: string[] = [];
 
   function visit(
-    nodeId: string
+    node: CanonicalGraphNode
   ): void {
-    if (visited.has(nodeId)) {
-      return
+    if (visited.has(node.id)) {
+      return;
     }
 
-    visited.add(nodeId)
-
-    traversal.push(nodeId)
+    visited.add(node.id);
 
     const children =
-      adjacency.get(nodeId)
-      ?? []
+      adjacency.get(node.id) ?? [];
 
     for (const child of children) {
-      visit(child)
+      visit(child);
     }
+
+    ordered.push(node.id);
   }
 
-  visit(rootNodeId)
+  for (const root of roots) {
+    visit(root);
+  }
 
   return Object.freeze(
-    traversal
-  )
+    ordered.slice()
+  );
 }

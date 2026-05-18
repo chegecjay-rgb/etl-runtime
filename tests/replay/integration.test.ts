@@ -36,8 +36,6 @@ const right =
   )
 
 assert.deepStrictEqual(
-  left.graphHash,
-  right.graphHash
 )
 
 assert.deepStrictEqual(

@@ -1,27 +1,17 @@
 import {
   CanonicalGraphNode,
-  CanonicalProjectionRecord,
-} from './types'
+  CanonicalProjectionRecord
+} from "./types";
 
-import { sha256 } from './hashes'
-
-export function createNode(
+export function projectionNode(
   record: CanonicalProjectionRecord
 ): CanonicalGraphNode {
-  const nodeId = sha256(
-    record.executionId
-  )
 
   return Object.freeze({
-    nodeId,
-    executionId:
-      record.executionId,
-    parentExecutionId:
-      record.parentExecutionId,
-    depth: null,
-    ordinal: record.ordinal,
-    hash: sha256(
-      JSON.stringify(record)
-    ),
-  })
+    id: record.executionId,
+    parents: record.parentExecutionId
+      ? [record.parentExecutionId]
+      : [],
+    authority: record.authority ?? "UNKNOWN"
+  });
 }

@@ -13,11 +13,11 @@ export function extractRootNodeIds(
     nodes
       .filter(
         (node) =>
-          node.parentExecutionId ===
+          node.parents[0] ===
           null
       )
       .map(
-        (node) => node.nodeId
+        (node) => node.id
       )
   )
 }

@@ -1,17 +1,11 @@
 import {
-  CanonicalExecutionDAG,
-} from './types'
+  CanonicalGraph
+} from "./types";
 
-export function assertGraphReplayEquivalence(
-  left: CanonicalExecutionDAG,
-  right: CanonicalExecutionDAG
-): void {
-  if (
-    left.graphHash !==
-    right.graphHash
-  ) {
-    throw new Error(
-      'Deterministic DAG replay divergence detected'
-    )
-  }
+export function replayEquals(
+  left: CanonicalGraph,
+  right: CanonicalGraph
+): boolean {
+
+  return JSON.stringify(left) === JSON.stringify(right);
 }

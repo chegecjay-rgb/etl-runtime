@@ -1,9 +1,10 @@
-import { createHash } from 'crypto'
+import {
+  CanonicalGraph
+} from "./types";
 
-export function sha256(
-  value: string
+export function hashGraph(
+  graph: CanonicalGraph
 ): string {
-  return createHash('sha256')
-    .update(value)
-    .digest('hex')
+
+  return JSON.stringify(graph);
 }

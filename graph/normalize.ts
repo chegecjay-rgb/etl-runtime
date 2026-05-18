@@ -1,35 +1,68 @@
-export function stableStringify(
-  value: unknown
-): string {
-  return JSON.stringify(
-    sortValue(value)
-  )
+import {
+  CanonicalGraph,
+  CanonicalGraphEdge,
+  CanonicalGraphNode
+} from "./types";
+
+import { sortNodes } from "./sort-nodes";
+
+function sortEdges(
+  edges: readonly CanonicalGraphEdge[]
+): readonly CanonicalGraphEdge[] {
+
+  return Object.freeze(
+    [...edges].sort((left, right) => {
+
+      const fromOrder =
+        left.from.localeCompare(right.from, "en");
+
+      if (fromOrder !== 0) {
+        return fromOrder;
+      }
+
+      const toOrder =
+        left.to.localeCompare(right.to, "en");
+
+      if (toOrder !== 0) {
+        return toOrder;
+      }
+
+      return left.ordinal - right.ordinal;
+    })
+  );
 }
 
-function sortValue(
-  value: unknown
-): unknown {
-  if (Array.isArray(value)) {
-    return value.map(sortValue)
-  }
+export function normalizeGraph(
+  graph: CanonicalGraph
+): CanonicalGraph {
 
-  if (
-    value !== null &&
-    typeof value === 'object'
-  ) {
-    const entries = Object.entries(
-      value as Record<string, unknown>
-    ).sort(([a], [b]) =>
-      a.localeCompare(b)
-    )
+  const normalizedNodes =
+    sortNodes(graph.nodes).map(
+      (node): CanonicalGraphNode =>
+        Object.freeze({
+          id: node.id,
+          parents: Object.freeze(
+            [...node.parents].sort((a, b) =>
+              a.localeCompare(b, "en")
+            )
+          ),
+          authority: node.authority
+        })
+    );
 
-    return Object.fromEntries(
-      entries.map(([key, entry]) => [
-        key,
-        sortValue(entry),
-      ])
-    )
-  }
+  return Object.freeze({
+    nodes: Object.freeze(normalizedNodes),
+    edges: sortEdges(graph.edges)
+  });
+}
 
-  return value
+export function stableStringify(
+  graph: CanonicalGraph
+): string {
+
+  return JSON.stringify(
+    normalizeGraph(graph),
+    null,
+    2
+  );
 }

@@ -1,31 +1,50 @@
 import {
-  CanonicalGraphEdge,
-} from './types'
+  CanonicalGraph,
+  CanonicalGraphEdge
+} from "./types";
 
-import { sha256 } from './hashes'
+export function deriveCanonicalEdges(
+  graph: CanonicalGraph
+): readonly CanonicalGraphEdge[] {
+  const edges: CanonicalGraphEdge[] = [];
 
-export function createEdge(
-  parentNodeId: string,
-  childNodeId: string,
-  ordinal: number
-): CanonicalGraphEdge {
-  const edgeId = sha256(
-    parentNodeId +
-    ':' +
-    childNodeId
-  )
+  for (const node of graph.nodes) {
+    node.parents.forEach(
+      (
+        parent,
+        ordinal
+      ) => {
+        edges.push(
+          Object.freeze({
+            from: parent,
+            to: node.id,
+            ordinal
+          })
+        );
+      }
+    );
+  }
 
-  return Object.freeze({
-    edgeId,
-    parentNodeId,
-    childNodeId,
-    ordinal,
-    hash: sha256(
-      JSON.stringify({
-        parentNodeId,
-        childNodeId,
-        ordinal,
-      })
-    ),
-  })
+  return Object.freeze(
+    edges.slice().sort(
+      (left, right) => {
+        if (left.from !== right.from) {
+          return left.from.localeCompare(
+            right.from
+          );
+        }
+
+        if (left.to !== right.to) {
+          return left.to.localeCompare(
+            right.to
+          );
+        }
+
+        return (
+          left.ordinal -
+          right.ordinal
+        );
+      }
+    )
+  );
 }

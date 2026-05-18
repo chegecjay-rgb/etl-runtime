@@ -1,40 +1,67 @@
-export function assertAcyclicGraph(
-  adjacency: ReadonlyMap<string, readonly string[]>
-): void {
+import {
+  CanonicalGraph,
+  CanonicalGraphNode
+} from "./types";
+
+import {
+  buildAdjacencyMap
+} from "./adjacency-map";
+
+export type CanonicalCycle = Readonly<{
+  path: readonly string[];
+}>;
+
+export function detectCycles(
+  graph: CanonicalGraph
+): readonly CanonicalCycle[] {
+  const adjacency =
+    buildAdjacencyMap(graph);
+
   const visited =
-    new Set<string>()
+    new Set<string>();
 
   const active =
-    new Set<string>()
+    new Set<string>();
+
+  const cycles:
+    CanonicalCycle[] = [];
 
   function visit(
-    nodeId: string
+    nodeId: string,
+    path: readonly string[]
   ): void {
     if (active.has(nodeId)) {
-      throw new Error(
-        'Deterministic DAG cycle detected'
-      )
+      cycles.push(
+        Object.freeze({
+          path: [...path, nodeId]
+        })
+      );
+      return;
     }
 
     if (visited.has(nodeId)) {
-      return
+      return;
     }
 
-    visited.add(nodeId)
-    active.add(nodeId)
+    visited.add(nodeId);
+    active.add(nodeId);
 
     const children =
-      adjacency.get(nodeId)
-      ?? []
+      adjacency.get(nodeId) ?? [];
 
     for (const child of children) {
-      visit(child)
+      visit(
+        child,
+        [...path, nodeId]
+      );
     }
 
-    active.delete(nodeId)
+    active.delete(nodeId);
   }
 
-  for (const nodeId of adjacency.keys()) {
-    visit(nodeId)
+  for (const node of graph.nodes) {
+    visit(node.id, []);
   }
+
+  return Object.freeze(cycles);
 }

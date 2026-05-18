@@ -1,24 +1,58 @@
 import {
-  CanonicalExecutionDAG,
-  CanonicalProjectionRecord,
-} from '../../graph/types'
+  CanonicalGraph,
+  CanonicalGraphNode,
+  CanonicalGraphEdge,
+  CanonicalProjectionRecord
+} from "../../graph/types";
 
-import {
-  deepFreeze,
-} from '../../graph/immutable'
+export function projectRecords(
+  records:
+    readonly CanonicalProjectionRecord[]
+): CanonicalGraph {
 
-import {
-  assembleCanonicalDAG,
-} from './assemble'
+  const nodes:
+    CanonicalGraphNode[] = [];
 
-import {
-  validateCanonicalDAG,
-} from './validate'
+  const edges:
+    CanonicalGraphEdge[] = [];
 
-export function projectCanonicalDAG(
-  records: readonly CanonicalProjectionRecord[]
-): CanonicalExecutionDAG {
-  return validateCanonicalDAG(
-    assembleCanonicalDAG(records)
-  )
+  for (const record of records) {
+
+    const parents =
+      record.parentExecutionId
+        ? [record.parentExecutionId]
+        : [];
+
+    nodes.push(
+      Object.freeze({
+        id: record.executionId,
+        parents,
+        authority:
+          record.authority ??
+          "UNKNOWN"
+      })
+    );
+
+    if (
+      record.parentExecutionId
+    ) {
+      edges.push(
+        Object.freeze({
+          from:
+            record.parentExecutionId,
+          to:
+            record.executionId,
+          ordinal:
+            record.ordinal
+        })
+      );
+    }
+  }
+
+  return Object.freeze({
+    nodes:
+      Object.freeze(nodes),
+    edges:
+      Object.freeze(edges)
+  });
 }

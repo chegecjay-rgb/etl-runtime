@@ -1,62 +1,38 @@
+export type Immutable<T> =
+  T extends (...args: any[]) => any
+    ? T
+    : T extends object
+      ? {
+          readonly [K in keyof T]:
+            Immutable<T[K]>;
+        }
+      : T;
+
 export function deepFreeze<T>(
   value: T
-): Readonly<T> {
+): Immutable<T> {
   if (
     value === null ||
-    value === undefined ||
-    typeof value !== 'object'
+    typeof value !== "object"
   ) {
-    return value as Readonly<T>
+    return value as Immutable<T>;
   }
 
-  if (Object.isFrozen(value)) {
-    return value as Readonly<T>
-  }
+  const target =
+    value as Record<string, unknown>;
 
-  if (Array.isArray(value)) {
-    for (const item of value) {
-      deepFreeze(item)
+  for (const key of Object.keys(target)) {
+    const nested = target[key];
+
+    if (
+      nested !== null &&
+      typeof nested === "object"
+    ) {
+      deepFreeze(nested);
     }
-
-    return Object.freeze(
-      value
-    ) as unknown as Readonly<T>
-  }
-
-  if (value instanceof Map) {
-    for (const [key, mapValue] of value) {
-      deepFreeze(key)
-      deepFreeze(mapValue)
-    }
-
-    return Object.freeze(
-      value
-    ) as unknown as Readonly<T>
-  }
-
-  if (value instanceof Set) {
-    for (const item of value) {
-      deepFreeze(item)
-    }
-
-    return Object.freeze(
-      value
-    ) as unknown as Readonly<T>
-  }
-
-  const record =
-    value as Record<
-      string,
-      unknown
-    >
-
-  for (const property of Object.keys(record)) {
-    deepFreeze(
-      record[property]
-    )
   }
 
   return Object.freeze(
     value
-  ) as Readonly<T>
+  ) as Immutable<T>;
 }

@@ -1,76 +1,28 @@
 import {
-  CanonicalExecutionDAG,
-  CanonicalProjectionRecord,
-} from '../../graph/types'
+  CanonicalProjectionRecord
+} from "../../graph/types";
 
 import {
-  materializeNodes,
-} from './construct'
+  projectRecords
+} from "./project";
 
 import {
-  materializeEdges,
-} from './link'
+  validateGraph
+} from "./validate";
 
-import {
-  buildAdjacencyMap,
-} from '../../graph/adjacency-map'
+export function assembleGraph(
+  records:
+    readonly CanonicalProjectionRecord[]
+) {
 
-import {
-  buildReverseAdjacencyMap,
-} from '../../graph/reverse-adjacency'
+  const graph =
+    projectRecords(records);
 
-import {
-  extractRootNodeIds,
-} from '../../graph/roots'
+  const certification =
+    validateGraph(graph);
 
-import {
-  extractOrphanNodeIds,
-} from '../../graph/extract-orphans'
-
-import {
-  certifyGraphHash,
-} from '../../graph/certify'
-
-import {
-  deepFreeze,
-} from '../../graph/immutable'
-
-export function assembleCanonicalDAG(
-  records: readonly CanonicalProjectionRecord[]
-): CanonicalExecutionDAG {
-  const nodes =
-    materializeNodes(records)
-
-  const edges =
-    materializeEdges(nodes)
-
-  const adjacency =
-    buildAdjacencyMap(edges)
-
-  const reverseAdjacency =
-    buildReverseAdjacencyMap(edges)
-
-  const roots =
-    extractRootNodeIds(nodes)
-
-  const orphans =
-    extractOrphanNodeIds(nodes)
-
-  const graphHash =
-    certifyGraphHash({
-      nodes,
-      edges,
-      roots,
-      orphans,
-    })
-
-  return deepFreeze({
-    graphHash,
-    nodes,
-    edges,
-    adjacency,
-    reverseAdjacency,
-    roots,
-    orphans,
-  })
+  return Object.freeze({
+    graph,
+    certification
+  });
 }

@@ -1,19 +1,34 @@
 import {
-  CanonicalProjectionRecord,
-} from '../../graph/types'
+  CanonicalGraph,
+  CanonicalGraphEdge,
+  CanonicalGraphNode
+} from "../../graph/types";
 
-import {
-  createNode,
-} from '../../graph/nodes'
+export function constructCanonicalGraph(
+  nodes: readonly CanonicalGraphNode[]
+): CanonicalGraph {
+  const edges: CanonicalGraphEdge[] = [];
 
-import {
-  sortNodes,
-} from '../../graph/sort-nodes'
+  for (const node of nodes) {
+    node.parents.forEach(
+      (parent, index) => {
+        edges.push(
+          Object.freeze({
+            from: parent,
+            to: node.id,
+            ordinal: index
+          })
+        );
+      }
+    );
+  }
 
-export function materializeNodes(
-  records: readonly CanonicalProjectionRecord[]
-) {
-  return sortNodes(
-    records.map(createNode)
-  )
+  return Object.freeze({
+    nodes: Object.freeze(
+      [...nodes]
+    ),
+    edges: Object.freeze(
+      edges
+    )
+  });
 }

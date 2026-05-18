@@ -1,42 +1,23 @@
 import {
-  CanonicalGraphEdge,
-} from './types'
+  CanonicalAdjacencyMap,
+  CanonicalGraph
+} from "./types";
 
-import {
-  sortAdjacency,
-} from './adjacency'
+export function createReverseAdjacencyMap(
+  graph: CanonicalGraph
+): CanonicalAdjacencyMap {
 
-export function buildReverseAdjacencyMap(
-  edges: readonly CanonicalGraphEdge[]
-): ReadonlyMap<
-  string,
-  readonly string[]
-> {
-  const adjacency =
-    new Map<string, string[]>()
+  const adjacency = new Map<string, string[]>();
 
-  for (const edge of edges) {
-    const existing =
-      adjacency.get(
-        edge.childNodeId
-      ) ?? []
+  graph.nodes.forEach((node) => {
+    adjacency.set(node.id, []);
+  });
 
-    existing.push(
-      edge.parentNodeId
-    )
+  graph.edges.forEach((edge) => {
+    const current = adjacency.get(edge.to) ?? [];
+    current.push(edge.from);
+    adjacency.set(edge.to, current);
+  });
 
-    adjacency.set(
-      edge.childNodeId,
-      existing
-    )
-  }
-
-  return new Map(
-    [...adjacency.entries()].map(
-      ([key, values]) => [
-        key,
-        sortAdjacency(values),
-      ]
-    )
-  )
+  return adjacency;
 }

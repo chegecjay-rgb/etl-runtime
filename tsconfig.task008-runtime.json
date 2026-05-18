@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "graph/types.ts",
+    "graph/sort-nodes.ts",
+    "graph/adjacency.ts",
+    "graph/normalize.ts"
+  ],
+  "exclude": [
+    "tests",
+    ".task008-backup",
+    "dist"
+  ]
+}

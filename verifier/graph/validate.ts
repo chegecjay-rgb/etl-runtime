@@ -1,17 +1,13 @@
 import {
-  CanonicalExecutionDAG,
-} from '../../graph/types'
+  CanonicalGraph
+} from "../../graph/types";
 
 import {
-  assertAcyclicGraph,
-} from '../../graph/detect-cycles'
+  certifyGraph
+} from "../../graph/certify";
 
-export function validateCanonicalDAG(
-  dag: CanonicalExecutionDAG
-): CanonicalExecutionDAG {
-  assertAcyclicGraph(
-    dag.adjacency
-  )
-
-  return dag
+export function validateGraph(
+  graph: CanonicalGraph
+) {
+  return certifyGraph(graph);
 }

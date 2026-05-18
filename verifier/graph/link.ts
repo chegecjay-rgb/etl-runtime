@@ -1,59 +1,26 @@
 import {
-  CanonicalGraphEdge,
-  CanonicalGraphNode,
-} from '../../graph/types'
+  CanonicalGraph,
+  CanonicalGraphEdge
+} from "../../graph/types";
 
-import {
-  createEdge,
-} from '../../graph/edges'
+export function linkGraph(
+  graph: CanonicalGraph
+): CanonicalGraph {
 
-import {
-  assertNoSelfCycle,
-} from '../../graph/cycles'
+  const edges: CanonicalGraphEdge[] = [];
 
-export function materializeEdges(
-  nodes: readonly CanonicalGraphNode[]
-): readonly CanonicalGraphEdge[] {
-  const executionMap =
-    new Map(
-      nodes.map((node) => [
-        node.executionId,
-        node,
-      ])
-    )
+  graph.nodes.forEach((node) => {
+    node.parents.forEach((parent, index) => {
+      edges.push({
+        from: parent,
+        to: node.id,
+        ordinal: index
+      });
+    });
+  });
 
-  const edges:
-    CanonicalGraphEdge[] = []
-
-  for (const node of nodes) {
-    if (
-      node.parentExecutionId === null
-    ) {
-      continue
-    }
-
-    const parent =
-      executionMap.get(
-        node.parentExecutionId
-      )
-
-    if (!parent) {
-      continue
-    }
-
-    assertNoSelfCycle(
-      parent.nodeId,
-      node.nodeId
-    )
-
-    edges.push(
-      createEdge(
-        parent.nodeId,
-        node.nodeId,
-        node.ordinal
-      )
-    )
-  }
-
-  return Object.freeze(edges)
+  return Object.freeze({
+    nodes: graph.nodes,
+    edges: Object.freeze(edges)
+  });
 }

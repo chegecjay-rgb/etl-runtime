@@ -13,7 +13,7 @@ export function extractOrphanNodeIds(
     new Set(
       nodes.map(
         (node) =>
-          node.executionId
+          node.id
       )
     )
 
@@ -21,18 +21,18 @@ export function extractOrphanNodeIds(
     nodes
       .filter((node) => {
         if (
-          node.parentExecutionId ===
+          node.parents[0] ===
           null
         ) {
           return false
         }
 
         return !executionIds.has(
-          node.parentExecutionId
+          node.parents[0]
         )
       })
       .map(
-        (node) => node.nodeId
+        (node) => node.id
       )
   )
 }
