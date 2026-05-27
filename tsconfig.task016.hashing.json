@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "declaration": false,
+    "sourceMap": false,
+    "outDir": "./dist/task016",
+    "rootDir": ".",
+    "types": [
+      "node"
+    ],
+    "skipLibCheck": true,
+    "noEmitOnError": true
+  },
+  "files": [
+    "replay/serialization/canonicalStringify.ts",
+    "replay/hashing/canonicalHash.ts",
+    "tests/replay/serialization-certification.test.ts",
+    "tests/replay/canonical-hash.test.ts"
+  ]
+}

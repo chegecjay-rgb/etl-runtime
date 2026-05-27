@@ -1,0 +1,10 @@
+{
+  "task": "TASK-016",
+  "target": "replay-equivalence-certification",
+  "generatedFiles": [
+    "replay/certification/certifyReplayEquivalence.ts",
+    "replay/manifests/createReplayManifest.ts",
+    "tests/replay/replay-equivalence.test.ts",
+    "tsconfig.task016.replay-equivalence.json"
+  ]
+}

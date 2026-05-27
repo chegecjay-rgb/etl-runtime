@@ -1,0 +1,10 @@
+{
+  "task": "TASK-016",
+  "target": "canonical-serialization-foundation",
+  "generatedFiles": [
+    "docs/CANONICAL_SERIALIZATION_CONTRACT.md",
+    "replay/serialization/canonicalStringify.ts",
+    "tests/replay/serialization-certification.test.ts",
+    "tsconfig.replay.json"
+  ]
+}

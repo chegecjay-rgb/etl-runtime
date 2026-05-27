@@ -1,0 +1,9 @@
+{
+  "task": "TASK-016",
+  "target": "canonical-hash-certification",
+  "generatedFiles": [
+    "replay/hashing/canonicalHash.ts",
+    "tests/replay/canonical-hash.test.ts",
+    "tsconfig.task016.hashing.json"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "task": "TASK-016",
+  "target": "deterministic-canonical-object-narrowing-repair",
+  "generatedFiles": [
+    "replay/serialization/canonicalStringify.ts"
+  ]
+}

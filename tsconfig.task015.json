@@ -1,11 +1,18 @@
 {
-  "extends": "./tsconfig.json",
   "compilerOptions": {
-    "noEmit": true
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "types": ["node"],
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true
   },
   "include": [
     "cli/**/*.ts",
-    "verifier/**/*.ts",
-    "tests/**/*.ts"
+    "verifier/cli/**/*.ts",
+    "tests/cli/**/*.ts",
+    "tests/replay/**/*.ts",
+    "tests/sovereignty/**/*.ts"
   ]
 }

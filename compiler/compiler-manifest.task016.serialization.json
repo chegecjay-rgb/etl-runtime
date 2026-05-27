@@ -1,0 +1,9 @@
+{
+  "task": "TASK-016",
+  "target": "isolated-serialization-certification",
+  "scope": [
+    "replay/serialization/canonicalStringify.ts",
+    "tests/replay/serialization-certification.test.ts",
+    "tsconfig.task016.serialization.json"
+  ]
+}

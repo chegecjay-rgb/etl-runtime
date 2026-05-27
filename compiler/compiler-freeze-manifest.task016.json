@@ -1,0 +1,8 @@
+{
+  "task": "TASK-016",
+  "status": "FROZEN",
+  "compilerBoundary": "SOVEREIGN",
+  "rootInheritance": false,
+  "relativePathsFrozen": true,
+  "deterministicCompilation": true
+}

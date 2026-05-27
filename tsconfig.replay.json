@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "declaration": false,
+    "sourceMap": false,
+    "outDir": "./dist/replay",
+    "rootDir": ".",
+    "types": ["node"],
+    "skipLibCheck": true,
+    "noEmitOnError": true
+  },
+  "include": [
+    "replay/**/*.ts",
+    "tests/replay/**/*.ts"
+  ]
+}

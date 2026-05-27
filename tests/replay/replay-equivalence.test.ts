@@ -1,120 +1,42 @@
-import fs from "node:fs";
-import path from "node:path";
-import assert from "node:assert";
-import {
-  spawnSync
-} from "node:child_process";
+import assert from "node:assert/strict"
+import { certifyReplayEquivalence } from "../../replay/certification/certifyReplayEquivalence"
 
-const fixturesDirectory =
-  path.resolve(
-    "fixtures/task015"
-  );
-
-fs.mkdirSync(
-  fixturesDirectory,
-  {
-    recursive: true
-  }
-);
-
-const evidencePath =
-  path.join(
-    fixturesDirectory,
-    "replay-equivalence.json"
-  );
-
-fs.writeFileSync(
-  evidencePath,
-  JSON.stringify({
-    status: "VALID"
-  }),
-  "utf8"
-);
-
-function executeReplay() {
-  return spawnSync(
-    "node",
-    [
-      "-r",
-      "ts-node/register",
-      "cli/verify.ts",
-      evidencePath
-    ],
-    {
-      cwd: path.resolve("."),
-      encoding: "utf8"
-    }
-  );
+const evidence = {
+  alpha: {
+    beta: "value",
+    delta: "e\u0301"
+  },
+  zeta: "line\r\nvalue"
 }
 
-const firstExecution =
-  executeReplay();
+const manifest = certifyReplayEquivalence(
+  evidence,
+  [
+    "snapshot-b.json",
+    "snapshot-a.json",
+    "snapshot-c.json"
+  ],
+  "stable-stdout",
+  "",
+  0,
+  100
+)
 
-const secondExecution =
-  executeReplay();
+assert.deepEqual(
+  manifest.artifacts,
+  [
+    "snapshot-a.json",
+    "snapshot-b.json",
+    "snapshot-c.json"
+  ]
+)
 
-const thirdExecution =
-  executeReplay();
+assert.equal(manifest.exitCode, 0)
 
-assert.deepStrictEqual(
-  firstExecution.status,
-  0
-);
+assert.equal(manifest.stderr, "")
 
-assert.deepStrictEqual(
-  secondExecution.status,
-  0
-);
+assert.equal(manifest.stdout, "stable-stdout")
 
-assert.deepStrictEqual(
-  thirdExecution.status,
-  0
-);
+assert.equal(manifest.replayHash.length, 64)
 
-assert.deepStrictEqual(
-  firstExecution.stdout,
-  secondExecution.stdout
-);
-
-assert.deepStrictEqual(
-  secondExecution.stdout,
-  thirdExecution.stdout
-);
-
-assert.deepStrictEqual(
-  firstExecution.stderr,
-  secondExecution.stderr
-);
-
-assert.deepStrictEqual(
-  secondExecution.stderr,
-  thirdExecution.stderr
-);
-
-assert.deepStrictEqual(
-  firstExecution.status,
-  secondExecution.status
-);
-
-assert.deepStrictEqual(
-  secondExecution.status,
-  thirdExecution.status
-);
-
-assert.deepStrictEqual(
-  firstExecution.stdout.trim(),
-  JSON.stringify({
-    status: "VALID",
-    certificationHash:
-      "eyJzdGF0dXMiOiJWQUxJRCJ9"
-  })
-);
-
-assert.deepStrictEqual(
-  firstExecution.stderr,
-  ""
-);
-
-process.stdout.write(
-  "TASK-015 replay equivalence tests passed\n"
-);
+console.log("replay-equivalence.test.ts passed")

@@ -1,0 +1,9 @@
+{
+  "task": "TASK-016",
+  "target": "certification-artifact-packaging",
+  "generatedFiles": [
+    "replay/certification/createCertificationBundle.ts",
+    "tests/replay/certification-packaging.test.ts",
+    "tsconfig.task016.packaging.json"
+  ]
+}

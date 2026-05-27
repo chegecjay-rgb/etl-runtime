@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "declaration": false,
+    "sourceMap": false,
+    "outDir": "../dist/task016",
+    "rootDir": "..",
+    "types": [
+      "node"
+    ],
+    "skipLibCheck": true,
+    "noEmitOnError": true,
+    "incremental": false,
+    "composite": false
+  },
+  "files": [
+    "../replay/serialization/canonicalStringify.ts",
+    "../replay/hashing/canonicalHash.ts",
+    "../replay/manifests/createReplayManifest.ts",
+    "../replay/isolation/runIsolatedReplay.ts",
+    "../replay/certification/createCertificationBundle.ts",
+    "../replay/entropy/entropyAudit.ts",
+    "./createCompilerAttestation.ts",
+    "../tests/replay/compiler-sovereignty.test.ts"
+  ]
+}

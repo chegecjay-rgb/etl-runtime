@@ -1,0 +1,22 @@
+{
+  "task": "TASK-016",
+  "target": "expanded-entropy-sovereignty-enforcement",
+  "generatedFiles": [
+    "replay/entropy/entropyAudit.ts",
+    "tests/replay/entropy-sovereignty.test.ts",
+    "tsconfig.task016.entropy.json"
+  ],
+  "blockedTokens": [
+    "Date.now",
+    "new Date",
+    "Math.random",
+    "performance.now",
+    "process.env",
+    "crypto.randomUUID",
+    "fetch(",
+    "XMLHttpRequest",
+    "WebSocket",
+    "navigator.",
+    "window."
+  ]
+}

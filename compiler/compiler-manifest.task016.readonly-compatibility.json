@@ -1,0 +1,9 @@
+{
+  "task": "TASK-016",
+  "target": "readonly-canonical-replay-compatibility",
+  "generatedFiles": [
+    "replay/serialization/canonicalStringify.ts",
+    "replay/isolation/runIsolatedReplay.ts",
+    "tsconfig.task016.replay-isolation.json"
+  ]
+}
