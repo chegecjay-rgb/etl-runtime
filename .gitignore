@@ -1,7 +1,12 @@
-*.pyc\n.task004-build/\n.task005-build/\n.task006-build/\n__pycache__/\ndist/\nnode_modules/\n
-node_modules/
-dist/
-coverage/
 *.log
-.DS_Store
+*.pyc\n.task004-build/\n.task005-build/\n.task006-build/\n__pycache__/\ndist/\nnode_modules/\n
 *.tsbuildinfo
+.DS_Store
+__pycache__/
+build/
+config/
+coverage/
+dist/
+fixtures/local/
+fixtures/real-evidence/
+node_modules/

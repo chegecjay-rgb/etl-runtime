@@ -1,58 +1,37 @@
-import {
-  CanonicalGraph,
-  CanonicalGraphNode,
-  CanonicalGraphEdge,
-  CanonicalProjectionRecord
-} from "../../graph/types";
+export interface CanonicalReplayDAG {
+  readonly roots: readonly string[];
+  readonly adjacency: Readonly<Record<string, readonly string[]>>;
+  readonly graphHash: string;
+}
 
-export function projectRecords(
-  records:
-    readonly CanonicalProjectionRecord[]
-): CanonicalGraph {
+export function projectCanonicalDAG(
+  value: unknown
+): CanonicalReplayDAG {
+  if (
+    value !== null &&
+    typeof value === "object"
+  ) {
+    const candidate = value as Record<string, unknown>
 
-  const nodes:
-    CanonicalGraphNode[] = [];
-
-  const edges:
-    CanonicalGraphEdge[] = [];
-
-  for (const record of records) {
-
-    const parents =
-      record.parentExecutionId
-        ? [record.parentExecutionId]
-        : [];
-
-    nodes.push(
-      Object.freeze({
-        id: record.executionId,
-        parents,
-        authority:
-          record.authority ??
-          "UNKNOWN"
-      })
-    );
-
-    if (
-      record.parentExecutionId
-    ) {
-      edges.push(
-        Object.freeze({
-          from:
-            record.parentExecutionId,
-          to:
-            record.executionId,
-          ordinal:
-            record.ordinal
-        })
-      );
+    return {
+      roots: Array.isArray(candidate.roots)
+        ? candidate.roots as readonly string[]
+        : [],
+      adjacency:
+        candidate.adjacency &&
+        typeof candidate.adjacency === "object"
+          ? candidate.adjacency as Readonly<Record<string, readonly string[]>>
+          : {},
+      graphHash:
+        typeof candidate.graphHash === "string"
+          ? candidate.graphHash
+          : "UNSPECIFIED_GRAPH_HASH"
     }
   }
 
-  return Object.freeze({
-    nodes:
-      Object.freeze(nodes),
-    edges:
-      Object.freeze(edges)
-  });
+  return {
+    roots: [],
+    adjacency: {},
+    graphHash: "UNSPECIFIED_GRAPH_HASH"
+  }
 }
