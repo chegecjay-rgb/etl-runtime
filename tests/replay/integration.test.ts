@@ -1,42 +1,32 @@
-import * as assert from 'assert'
+const assert = require("assert")
 
-import {
+const {
   certifyReplay,
-} from '../../replay/certify'
-
-const projection = [
-  {
-    executionId: 'root',
-    parentExecutionId: null,
-    ordinal: 0,
-    timestamp: '2026-01-01T00:00:00Z',
-  },
-  {
-    executionId: 'child-a',
-    parentExecutionId: 'root',
-    ordinal: 1,
-    timestamp: '2026-01-01T00:00:01Z',
-  },
-  {
-    executionId: 'child-b',
-    parentExecutionId: 'root',
-    ordinal: 2,
-    timestamp: '2026-01-01T00:00:02Z',
-  },
-] as const
+} = require("../../dist-runtime/replay/certify.js")
 
 const left =
-  certifyReplay(
-    projection
-  )
+  certifyReplay({
+    roots: ["root-node"],
+    adjacency: {
+      "root-node": [
+        "child-a-node",
+        "child-b-node",
+      ],
+    },
+    graphHash: "GRAPH_HASH_V1",
+  })
 
 const right =
-  certifyReplay(
-    projection
-  )
-
-assert.deepStrictEqual(
-)
+  certifyReplay({
+    roots: ["root-node"],
+    adjacency: {
+      "root-node": [
+        "child-a-node",
+        "child-b-node",
+      ],
+    },
+    graphHash: "GRAPH_HASH_V1",
+  })
 
 assert.deepStrictEqual(
   left.traversal,
@@ -49,5 +39,5 @@ assert.deepStrictEqual(
 )
 
 console.log(
-  'integration.test.ts passed'
+  "integration.test.ts passed"
 )

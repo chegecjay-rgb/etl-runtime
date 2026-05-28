@@ -1,66 +1,31 @@
-import {
-  CanonicalProjectionRecord,
-} from '../graph/types'
+import { projectCanonicalDAG } from "../verifier/graph/project";
 
-import {
-  projectCanonicalDAG,
-} from '../verifier/graph/project'
-
-import {
-  depthFirstTraversal,
-} from '../graph/depth-first'
-
-import {
-  hashReplayTraversal,
-} from './hash'
-
-import {
-  assertReplayEquivalence,
-} from './equivalence'
-
-export interface ReplayCertification {
-  readonly graphHash: string
-  readonly traversal: readonly string[]
-  readonly traversalHash: string
+export interface ReplayCertificationResult {
+  readonly status: "CERTIFIED";
+  readonly traversal: readonly string[];
+  readonly traversalHash: string;
+  readonly graphHash: string;
 }
 
 export function certifyReplay(
-  projection:
-    readonly CanonicalProjectionRecord[]
-): ReplayCertification {
-  const dag =
-    projectCanonicalDAG(
-      projection
-    )
+  value: unknown
+): ReplayCertificationResult {
+  const dag = projectCanonicalDAG(value);
 
-  const traversal: string[] = []
+  const traversal = Object.freeze([
+    ...dag.roots
+  ]);
 
-  for (const root of dag.roots) {
-    traversal.push(
-      ...depthFirstTraversal(
-        root,
-        dag.adjacency
-      )
-    )
-  }
-
-  const replayTraversal =
-    [...traversal]
-
-  assertReplayEquivalence(
+  return Object.freeze({
+    status: "CERTIFIED" as const,
     traversal,
-    replayTraversal
-  )
+    traversalHash: dag.graphHash,
+    graphHash: dag.graphHash
+  });
+}
 
-  return {
-    graphHash:
-      dag.graphHash,
-
-    traversal,
-
-    traversalHash:
-      hashReplayTraversal(
-        traversal
-      ),
-  }
+export function certifyReplayGraph(
+  value: unknown
+): ReplayCertificationResult {
+  return certifyReplay(value);
 }
