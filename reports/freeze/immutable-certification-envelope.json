@@ -1,0 +1,36 @@
+{
+  "archivalMetadata": {
+    "formatVersion": 1,
+    "generatedAt": "2026-05-28T07:24:55.642138+00:00",
+    "generator": "TASK-019-CONSTITUTIONAL-CERTIFIER"
+  },
+  "certificationType": "IMMUTABLE_CONSTITUTIONAL_FREEZE_ENVELOPE",
+  "constitutionalState": {
+    "canonicalSourcesOnly": true,
+    "distExcluded": true,
+    "trackedCanonicalFiles": 573,
+    "transientArtifactsExcluded": true
+  },
+  "determinism": {
+    "freezeValidated": true,
+    "reconstructionStable": true,
+    "rejectionValidated": true,
+    "replayValidated": true
+  },
+  "freezeLineage": {
+    "currentPhase": "TASK-019-PHASE-4",
+    "previousPhase": "TASK-019-PHASE-3",
+    "status": "ARCHIVAL_CERTIFICATION_ACTIVE"
+  },
+  "freezeManifest": {
+    "path": "reports/freeze/canonical-freeze-manifest.json",
+    "sha256": "758c3977f204cb7ac07a2a22de3f5eb89e7b6d2449ce1cd9742d7d9e85bdac45"
+  },
+  "phase": "PHASE-4",
+  "repository": {
+    "branch": "main",
+    "commit": "12be80dd4c1f5757ce338e1cd38bd4aa85be942f",
+    "name": "etl-runtime"
+  },
+  "task": "TASK-019"
+}

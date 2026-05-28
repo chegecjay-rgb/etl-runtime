@@ -1,0 +1,27 @@
+{
+  "archival_properties": {
+    "constitutionally_frozen": true,
+    "deterministic": true,
+    "publication_grade": true,
+    "replay_verified": true
+  },
+  "certification_chain": {
+    "freeze_manifest_established": true,
+    "immutable_envelope_established": true,
+    "publication_attestation_established": true
+  },
+  "constitutional_artifacts": {
+    "canonical_manifest": {
+      "path": "reports/freeze/canonical-freeze-manifest.json",
+      "sha256": "758c3977f204cb7ac07a2a22de3f5eb89e7b6d2449ce1cd9742d7d9e85bdac45"
+    },
+    "certification_envelope": {
+      "path": "reports/freeze/immutable-certification-envelope.json",
+      "sha256": "1bb30a9b4f09a33b3b1f749a4ec84dd03a1baf0c9283df306a9b3996811be64b"
+    }
+  },
+  "generated_utc": "2026-05-28T07:31:53.719533+00:00",
+  "publication_classification": "constitutional-publication-attestation",
+  "publication_state": "FINAL_ARCHIVAL_PUBLICATION",
+  "task": "TASK-019"
+}

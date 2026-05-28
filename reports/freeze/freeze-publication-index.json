@@ -1,0 +1,34 @@
+{
+  "archivalPublicationMetadata": {
+    "canonicalState": true,
+    "deterministicPublication": true,
+    "generatedAt": "2026-05-28T07:31:33.486157+00:00",
+    "publicationClass": "PUBLIC_ARCHIVAL_CONSTITUTIONAL_RECORD",
+    "transientArtifactsExcluded": true
+  },
+  "certificationChain": {
+    "phase3": "CANONICAL_FREEZE_MANIFEST_GENERATED",
+    "phase4": "IMMUTABLE_CERTIFICATION_ENVELOPE_GENERATED",
+    "phase5": "PUBLICATION_ATTESTATION_GENERATED"
+  },
+  "publicationArtifacts": [
+    {
+      "artifact": "canonical-freeze-manifest",
+      "path": "reports/freeze/canonical-freeze-manifest.json",
+      "sha256": "758c3977f204cb7ac07a2a22de3f5eb89e7b6d2449ce1cd9742d7d9e85bdac45"
+    },
+    {
+      "artifact": "immutable-certification-envelope",
+      "path": "reports/freeze/immutable-certification-envelope.json",
+      "sha256": "1bb30a9b4f09a33b3b1f749a4ec84dd03a1baf0c9283df306a9b3996811be64b"
+    }
+  ],
+  "publicationPhase": "PHASE-5",
+  "publicationState": "FINAL_CONSTITUTIONAL_PUBLICATION_STATE",
+  "repository": {
+    "branch": "main",
+    "commit": "12be80dd4c1f5757ce338e1cd38bd4aa85be942f",
+    "name": "etl-runtime"
+  },
+  "task": "TASK-019"
+}
