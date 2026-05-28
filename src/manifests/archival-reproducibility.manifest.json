@@ -1,0 +1,7 @@
+{
+  "manifestReproducibility": true,
+  "artifactReproducibility": true,
+  "serializationStable": true,
+  "replayIdentityStable": true,
+  "deterministicArchivalReconstruction": true
+}

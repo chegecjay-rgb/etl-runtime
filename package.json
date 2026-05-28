@@ -16,7 +16,7 @@
     "typescript": "^6.0.3"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --runInBand",
     "test:task014": "jest --config ./jest.config.task014.js --runInBand"
   },
   "repository": {

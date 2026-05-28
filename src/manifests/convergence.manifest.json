@@ -1,0 +1,6 @@
+{
+  "subsystemConvergence": true,
+  "executionModelUnified": true,
+  "replaySafe": true,
+  "deterministicallyBounded": true
+}

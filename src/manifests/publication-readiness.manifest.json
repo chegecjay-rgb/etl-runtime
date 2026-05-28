@@ -1,0 +1,8 @@
+{
+  "publicationStable": true,
+  "semanticallyFrozen": true,
+  "deterministicallyBounded": true,
+  "replayStable": true,
+  "archivallyReproducible": true,
+  "publicationConsistent": true
+}
