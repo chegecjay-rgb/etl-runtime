@@ -1,7 +1,4 @@
-import {
-  CanonicalGraph,
-  CanonicalGraphNode
-} from "./types.js";
+import type { CanonicalGraph, CanonicalGraphNode } from "./types.js";
 
 import {
   buildAdjacencyMap

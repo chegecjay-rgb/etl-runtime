@@ -1,11 +1,6 @@
 import type { immutable } from "./immutable.js";
 
-import {
-  CertificationLineage,
-  ImmutableLedgerExport,
-  ReplayCheckpoint,
-  SnapshotReference
-} from "./types.js";
+import type { CertificationLineage, ImmutableLedgerExport, ReplayCheckpoint, SnapshotReference } from "./types.js";
 
 import {
   deterministicHash

@@ -26,7 +26,7 @@ export function ensureThrows(
 ): void {
   try {
     handler();
-  } catch (error) {
+  } catch (error: any) {
     if (predicate(error)) {
       return;
     }

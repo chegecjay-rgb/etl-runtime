@@ -1,8 +1,6 @@
 import * as assert from 'assert'
 
-import {
-  ReplayAttestation,
-} from './attestation.js'
+import type { ReplayAttestation } from "./attestation.js";
 
 export function verifyReplayAttestation(
   attestation: ReplayAttestation

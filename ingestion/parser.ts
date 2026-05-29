@@ -8,10 +8,7 @@ import {
   RejectionCode,
 } from "./reject.js"
 
-import {
-  CanonicalEvidenceInput,
-  EvidenceKind,
-} from "./schemas.js"
+import type { CanonicalEvidenceInput, EvidenceKind } from "./schemas.js";
 
 import type { normalizeTimestamp } from "./timestamp.js"
 

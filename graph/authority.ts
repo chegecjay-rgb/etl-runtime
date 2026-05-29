@@ -1,6 +1,4 @@
-import {
-  CanonicalGraph
-} from "./types.js";
+import type { CanonicalGraph } from "./types.js";
 
 export type CanonicalAuthorityViolation =
   Readonly<{

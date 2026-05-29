@@ -2,9 +2,7 @@ import {
   canonicalTraversal
 } from "../../verifier/ordering/traversal.js";
 
-import {
-  TraversalNode
-} from "../../types/ordering.js";
+import type { TraversalNode } from "../../types/ordering.js";
 
 function assert(
   condition: boolean,

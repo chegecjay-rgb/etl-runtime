@@ -1,7 +1,4 @@
-import {
-  CanonicalGraphNode,
-  CanonicalProjectionRecord
-} from "./types.js";
+import type { CanonicalGraphNode, CanonicalProjectionRecord } from "./types.js";
 
 export function projectionNode(
   record: CanonicalProjectionRecord

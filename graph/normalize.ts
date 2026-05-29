@@ -1,8 +1,4 @@
-import {
-  CanonicalGraph,
-  CanonicalGraphEdge,
-  CanonicalGraphNode
-} from "./types.js";
+import type { CanonicalGraph, CanonicalGraphEdge, CanonicalGraphNode } from "./types.js";
 
 import type { sortNodes } from "./sort-nodes.js";
 

@@ -1,6 +1,4 @@
-import {
-  VerificationState
-} from "../../outputs/states.js";
+import type { VerificationState } from "../../outputs/states.js";
 
 import {
   deepFreeze

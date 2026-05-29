@@ -1,6 +1,4 @@
-import {
-  CanonicalProjectionRecord
-} from "../../graph/types.js";
+import type { CanonicalProjectionRecord } from "../../graph/types.js";
 
 import {
   projectRecords

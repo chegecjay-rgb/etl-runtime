@@ -1,6 +1,4 @@
-import {
-  TraversalNode
-} from "../../types/ordering.js";
+import type { TraversalNode } from "../../types/ordering.js";
 
 import {
   lexicalTieBreak

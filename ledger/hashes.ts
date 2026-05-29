@@ -1,12 +1,6 @@
 import type { createHash } from "node:crypto";
 
-import {
-  CertificationEntry,
-  CertificationLineage,
-  JsonObject,
-  JsonValue,
-  SnapshotReference
-} from "./types.js";
+import type { CertificationEntry, CertificationLineage, JsonObject, JsonValue, SnapshotReference } from "./types.js";
 
 function isJsonObject(value: JsonValue): value is JsonObject {
   return (

@@ -1,9 +1,4 @@
-import {
-  CanonicalGraph,
-  CanonicalGraphEdge,
-  CanonicalGraphNode,
-  CanonicalProjectionRecord
-} from "../types.js";
+import type { CanonicalGraph, CanonicalGraphEdge, CanonicalGraphNode, CanonicalProjectionRecord } from "../types.js";
 
 export function projectCanonicalGraph(
   records: readonly CanonicalProjectionRecord[]

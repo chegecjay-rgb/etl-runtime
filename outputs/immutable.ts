@@ -1,6 +1,4 @@
-import {
-  VerificationState
-} from "./states.js";
+import type { VerificationState } from "./states.js";
 
 const FROZEN_OBJECTS = new WeakSet<object>();
 

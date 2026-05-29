@@ -1,6 +1,4 @@
-import {
-  CanonicalGraph
-} from "../../graph/types.js";
+import type { CanonicalGraph } from "../../graph/types.js";
 
 import {
   certifyGraph

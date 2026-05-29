@@ -1,10 +1,6 @@
 import type { immutable } from "./immutable.js";
 
-import {
-  CertificationArtifact,
-  CertificationEntry,
-  JsonValue
-} from "./types.js";
+import type { CertificationArtifact, CertificationEntry, JsonValue } from "./types.js";
 
 import {
   deterministicHash

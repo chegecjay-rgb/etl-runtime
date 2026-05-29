@@ -1,8 +1,6 @@
 import crypto from "crypto";
 
-import {
-  CanonicalGraph
-} from "./types.js";
+import type { CanonicalGraph } from "./types.js";
 
 import {
   normalizeGraph

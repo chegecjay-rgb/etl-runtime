@@ -1,4 +1,4 @@
-import publicationManifest from '../manifests/publication-readiness.manifest.json';
+import publicationManifest from '../manifests/publication-readiness.manifest.json' with { type: "json" };
 
 export const PUBLICATION_CERTIFICATION = Object.freeze({
   publicationStable:

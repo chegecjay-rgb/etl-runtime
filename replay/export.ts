@@ -1,6 +1,4 @@
-import {
-  ReplayAttestation,
-} from './attestation.js'
+import type { ReplayAttestation } from "./attestation.js";
 
 export interface ConstitutionalReplayArtifact {
   readonly version: string

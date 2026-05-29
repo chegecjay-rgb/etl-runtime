@@ -1,9 +1,6 @@
 import type { immutable } from "./immutable.js";
 
-import {
-  CertificationLineage,
-  SnapshotReference
-} from "./types.js";
+import type { CertificationLineage, SnapshotReference } from "./types.js";
 
 import {
   deterministicHash

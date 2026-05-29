@@ -1,4 +1,4 @@
-import archivalManifest from '../manifests/archival-reproducibility.manifest.json';
+import archivalManifest from '../manifests/archival-reproducibility.manifest.json' with { type: "json" };
 
 export const ARCHIVAL_REPRODUCIBILITY = Object.freeze({
   manifestReproducibility:
