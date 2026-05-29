@@ -1,21 +1,32 @@
-import type { VerificationState } from "../../outputs/states.js";
+import type {
+  VerificationState
+} from "../../outputs/states.js";
 
 import {
   deepFreeze
 } from "../../outputs/immutable.js";
 
 import {
-  formatVerificationOutput,
+  formatVerificationOutput
+} from "../../outputs/format.js";
+
+import type {
   FormattedVerificationOutput
 } from "../../outputs/format.js";
 
 import {
-  certifyOutput,
+  certifyOutput
+} from "../../outputs/certify.js";
+
+import type {
   OutputCertification
 } from "../../outputs/certify.js";
 
 import {
-  inspectCertification,
+  inspectCertification
+} from "../../outputs/diagnostics.js";
+
+import type {
   OutputDiagnostics
 } from "../../outputs/diagnostics.js";
 

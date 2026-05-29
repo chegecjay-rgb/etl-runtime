@@ -1,7 +1,7 @@
 test("constitutional certification", () => {
 import assert from "node:assert/strict"
 import path from "node:path"
-import type { runIsolatedReplay } from "../../replay/isolation/runIsolatedReplay.js"
+import { runIsolatedReplay  } from "../../replay/isolation/runIsolatedReplay.js"
 
 const environmentA = path.resolve(
   "fixtures/task016/environment-a"

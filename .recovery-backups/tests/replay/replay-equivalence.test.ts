@@ -1,6 +1,6 @@
 test("constitutional certification", () => {
 import assert from "node:assert/strict"
-import type { certifyReplayEquivalence } from "../../replay/certification/certifyReplayEquivalence.js"
+import { certifyReplayEquivalence  } from "../../replay/certification/certifyReplayEquivalence.js"
 
 const evidence = {
   alpha: {

@@ -2,7 +2,7 @@ test("constitutional certification", () => {
 import assert from "node:assert/strict"
 import path from "node:path"
 
-import type { createCompilerAttestation } from "../../compiler/createCompilerAttestation.js"
+import { createCompilerAttestation  } from "../../compiler/createCompilerAttestation.js"
 
 const tsconfigPath = path.resolve(
   "compiler/tsconfig.replay.sovereign.json"

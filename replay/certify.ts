@@ -1,4 +1,4 @@
-import type { projectCanonicalDAG } from "../verifier/graph/project.js";
+import { projectCanonicalDAG } from "../verifier/graph/project.js";
 
 export interface ReplayCertificationResult {
   readonly status: "CERTIFIED";

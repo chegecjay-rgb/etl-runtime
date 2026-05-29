@@ -10,7 +10,7 @@ import {
 
 import type { CanonicalEvidenceInput, EvidenceKind } from "./schemas.js";
 
-import type { normalizeTimestamp } from "./timestamp.js"
+import { normalizeTimestamp  } from "./timestamp.js"
 
 import {
   validateCanonicalValue,

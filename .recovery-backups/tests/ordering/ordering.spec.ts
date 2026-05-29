@@ -1,4 +1,4 @@
-import {
+import type {
   canonicalizeEvidence,
   CanonicalEvidence
 } from "../../verifier/ordering/order.js";

@@ -1,6 +1,6 @@
 import assert from "node:assert/strict"
 import path from "node:path"
-import type { runEntropyAudit } from "../../replay/entropy/entropyAudit.js"
+import { runEntropyAudit  } from "../../replay/entropy/entropyAudit.js"
 
 const report = runEntropyAudit([
   path.resolve("replay"),

@@ -1,13 +1,13 @@
-import type { deepFreeze, type Immutable } from "../../rules/immutable.js";
+import { deepFreeze, type Immutable } from "../../rules/immutable.js";
 import {
   createRuleEvaluationContext,
   type RuleContextInput,
 } from "../../rules/context.js";
-import type { createRuleRegistry } from "../../rules/registry.js";
-import type { traverseRegistry } from "../../rules/traversal.js";
-import type { executeRules } from "../../rules/execute.js";
-import type { certifyExecution } from "../../rules/certify.js";
-import type { createDiagnostics } from "../../rules/diagnostics.js";
+import { createRuleRegistry  } from "../../rules/registry.js";
+import { traverseRegistry  } from "../../rules/traversal.js";
+import { executeRules  } from "../../rules/execute.js";
+import { certifyExecution  } from "../../rules/certify.js";
+import { createDiagnostics  } from "../../rules/diagnostics.js";
 import type { VerificationRule } from "../../rules/types.js";
 
 export interface VerificationRuntimeResult {

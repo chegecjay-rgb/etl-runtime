@@ -1,6 +1,6 @@
 test("constitutional certification", () => {
 import assert from "node:assert/strict"
-import type { canonicalHash } from "../../replay/hashing/canonicalHash.js"
+import { canonicalHash  } from "../../replay/hashing/canonicalHash.js"
 
 const payloadA = {
   zeta: "last\r\nline",

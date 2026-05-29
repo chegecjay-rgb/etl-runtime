@@ -1,4 +1,4 @@
-import type { deepFreeze, type Immutable } from "./immutable.js";
+import { deepFreeze, type Immutable } from "./immutable.js";
 import type {
   EvaluationScope,
   VerificationRule,

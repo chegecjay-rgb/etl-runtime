@@ -3,7 +3,7 @@ import {
   equal,
 } from "./assert.js"
 
-import type { admitEvidence } from "../../ingestion/admission.js"
+import { admitEvidence  } from "../../ingestion/admission.js"
 
 const input = [
   {

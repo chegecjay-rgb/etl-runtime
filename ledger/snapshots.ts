@@ -1,4 +1,4 @@
-import type { immutable } from "./immutable.js";
+import { immutable  } from "./immutable.js";
 
 import type { CertificationLineage, SnapshotReference } from "./types.js";
 

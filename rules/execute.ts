@@ -1,4 +1,4 @@
-import type { deepFreeze, type Immutable } from "./immutable.js";
+import { deepFreeze, type Immutable } from "./immutable.js";
 import type { RuleEvaluationContext } from "./context.js";
 import type { RuleResult, VerificationRule } from "./types.js";
 import type { RuleRegistry } from "./registry.js";

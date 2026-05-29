@@ -1,4 +1,4 @@
-import type { deepFreeze, type DeepReadonly } from "../../authority/immutable.js";
+import { deepFreeze, type DeepReadonly } from "../../authority/immutable.js";
 
 import {
   certifyAuthorityVerification,

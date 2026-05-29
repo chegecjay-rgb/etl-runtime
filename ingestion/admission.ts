@@ -1,15 +1,15 @@
-import type { buildCanonicalEvidenceSet } from "./evidenceSet.js"
+
+
+import { buildCanonicalEvidenceSet  } from "./evidenceSet.js"
 
 import {
   assertDeepFrozen,
 } from "./immutability.js"
 
-import type { normalizeEvidence } from "./normalize.js"
+import { normalizeEvidence  } from "./normalize.js"
 
-import {
-  parseEvidence,
-  ParsedEvidence,
-} from "./parser.js"
+import { parseEvidence } from "./parser.js";
+import type { ParsedEvidence } from "./parser.js";
 
 export type AdmissionResult =
   Readonly<{

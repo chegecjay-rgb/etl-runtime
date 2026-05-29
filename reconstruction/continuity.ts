@@ -1,4 +1,4 @@
-import type { ReconstructionError } from "./errors.js";
+import { ReconstructionError } from "./errors.js";
 
 import type {
   CanonicalExecutionNode,

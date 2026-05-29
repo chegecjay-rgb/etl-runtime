@@ -1,4 +1,4 @@
-import type { deepFreeze, type DeepReadonly } from "./immutable.js";
+import { deepFreeze, type DeepReadonly } from "./immutable.js";
 import type {
   AuthorityContinuityResult
 } from "./continuity.js";

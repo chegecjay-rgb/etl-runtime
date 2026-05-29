@@ -1,4 +1,4 @@
-import type { deepFreeze, type Immutable } from "../../rules/immutable.js";
+import { deepFreeze, type Immutable } from "../../rules/immutable.js";
 import type { RuleContextInput } from "../../rules/context.js";
 import {
   CONSTITUTIONAL_RULES,

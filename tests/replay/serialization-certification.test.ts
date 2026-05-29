@@ -1,5 +1,5 @@
 import assert from "node:assert/strict"
-import type { canonicalStringify } from "../../replay/serialization/canonicalStringify.js"
+import { canonicalStringify  } from "../../replay/serialization/canonicalStringify.js"
 
 const payloadA = {
   zeta: "last\r\nline",

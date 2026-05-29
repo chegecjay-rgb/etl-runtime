@@ -1,8 +1,8 @@
 import fs from "node:fs"
 import os from "node:os"
 import path from "node:path"
-import type { canonicalHash } from "../hashing/canonicalHash.js"
-import type { createReplayManifest } from "../manifests/createReplayManifest.js"
+import { canonicalHash  } from "../hashing/canonicalHash.js"
+import { createReplayManifest } from "../manifests/createReplayManifest.js"
 
 export type IsolatedReplayResult = Readonly<{
   replayHash: string

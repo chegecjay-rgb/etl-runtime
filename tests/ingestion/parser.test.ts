@@ -4,7 +4,7 @@ import {
   throws,
 } from "./assert.js"
 
-import type { parseEvidence } from "../../ingestion/parser.js"
+import { parseEvidence  } from "../../ingestion/parser.js"
 
 import {
   DeterministicRejection,
@@ -46,7 +46,7 @@ throws(
     }),
   (error: unknown) =>
     error instanceof DeterministicRejection &&
-    error.code === RejectionCode.INVALID_TIMESTAMP,
+    (error as any).code === RejectionCode.INVALID_TIMESTAMP,
   "invalid timestamp rejection failed",
 )
 
@@ -58,7 +58,7 @@ throws(
     }),
   (error: unknown) =>
     error instanceof DeterministicRejection &&
-    error.code === RejectionCode.UNSUPPORTED_KIND,
+    (error as any).code === RejectionCode.UNSUPPORTED_KIND,
   "unsupported kind rejection failed",
 )
 
@@ -69,7 +69,7 @@ throws(
     }),
   (error: unknown) =>
     error instanceof DeterministicRejection &&
-    error.code === RejectionCode.INVALID_STRUCTURE,
+    (error as any).code === RejectionCode.INVALID_STRUCTURE,
   "invalid structure rejection failed",
 )
 

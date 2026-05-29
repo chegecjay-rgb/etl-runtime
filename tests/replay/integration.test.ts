@@ -1,8 +1,8 @@
-const assert = require("assert")
+import assert from "node:assert"
 
 const {
   certifyReplay,
-} = require("../../dist-runtime/replay/certify.js")
+} = await import("../../replay/certify.js")
 
 const left =
   certifyReplay({

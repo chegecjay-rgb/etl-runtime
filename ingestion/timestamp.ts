@@ -1,4 +1,4 @@
-import type { reject, RejectionCode } from "./reject.js"
+import { reject, RejectionCode } from "./reject.js"
 
 const RFC3339_UTC =
   /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/

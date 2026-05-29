@@ -1,4 +1,4 @@
-import type { canonicalHash } from "../hashing/canonicalHash.js"
+import { canonicalHash  } from "../hashing/canonicalHash.js"
 import {
   canonicalStringify,
   type CanonicalValue

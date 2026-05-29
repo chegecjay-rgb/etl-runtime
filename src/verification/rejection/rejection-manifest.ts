@@ -1,4 +1,4 @@
-import type { createHash } from "crypto";
+import { createHash  } from "crypto";
 import type { DeterministicFailure } from "./deterministic-failure.js";
 
 export interface RejectionManifest {

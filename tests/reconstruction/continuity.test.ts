@@ -46,7 +46,7 @@ ensureThrows(
     ]),
   (error: unknown) =>
     error instanceof ReconstructionError &&
-    error.code ===
+    (error as any).code ===
       "INVALID_RESOLVED_PARENT",
   "continuity validation failed",
 );

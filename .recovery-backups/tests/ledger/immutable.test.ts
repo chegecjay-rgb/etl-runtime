@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 
-import type { immutable } from "../../ledger/immutable.js";
+import { immutable  } from "../../ledger/immutable.js";
 
 test("deep freeze recursively freezes structures", () => {
   const frozen = immutable({

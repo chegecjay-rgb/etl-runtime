@@ -5,7 +5,7 @@ import {
   throws,
 } from "./assert.js"
 
-import type { parseEvidence } from "../../ingestion/parser.js"
+import { parseEvidence  } from "../../ingestion/parser.js"
 
 import {
   DeterministicRejection,

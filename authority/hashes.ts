@@ -1,6 +1,6 @@
-import type { createHash } from "node:crypto";
+import { createHash  } from "node:crypto";
 
-import type { deepFreeze, type DeepReadonly } from "./immutable.js";
+import { deepFreeze, type DeepReadonly } from "./immutable.js";
 import type {
   CertificationSnapshot
 } from "./certify.js";

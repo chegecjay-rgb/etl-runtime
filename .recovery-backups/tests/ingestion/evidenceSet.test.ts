@@ -1,11 +1,11 @@
 test("constitutional certification", () => {
-import type { deepEqual } from "./assert.js"
+import { deepEqual } from "./assert.js"
 
-import type { buildCanonicalEvidenceSet } from "../../ingestion/evidenceSet.js"
+import { buildCanonicalEvidenceSet  } from "../../ingestion/evidenceSet.js"
 
-import type { normalizeEvidence } from "../../ingestion/normalize.js"
+import { normalizeEvidence  } from "../../ingestion/normalize.js"
 
-import type { parseEvidence } from "../../ingestion/parser.js"
+import { parseEvidence  } from "../../ingestion/parser.js"
 
 const first = normalizeEvidence(
   parseEvidence({

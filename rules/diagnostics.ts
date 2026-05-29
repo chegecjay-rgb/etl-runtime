@@ -1,4 +1,4 @@
-import type { deepFreeze, type Immutable } from "./immutable.js";
+import { deepFreeze, type Immutable } from "./immutable.js";
 import type { RuleCertification } from "./certify.js";
 import type { ExecutionResult } from "./execute.js";
 import type { TraversalResult } from "./traversal.js";

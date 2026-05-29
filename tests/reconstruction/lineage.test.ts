@@ -76,7 +76,7 @@ ensureThrows(
     ]),
   (error: unknown) =>
     error instanceof ReconstructionError &&
-    error.code === "SELF_PARENT",
+    (error as any).code === "SELF_PARENT",
   "self parent rejection failed",
 );
 
@@ -102,7 +102,7 @@ ensureThrows(
     ]),
   (error: unknown) =>
     error instanceof ReconstructionError &&
-    error.code === "CYCLIC_LINEAGE",
+    (error as any).code === "CYCLIC_LINEAGE",
   "cyclic lineage rejection failed",
 );
 

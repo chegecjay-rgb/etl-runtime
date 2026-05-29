@@ -1,4 +1,4 @@
-import type { admitEvidence } from "../../ingestion/admission.js"
+import { admitEvidence  } from "../../ingestion/admission.js"
 
 import {
   buildReplayDiagnostic,

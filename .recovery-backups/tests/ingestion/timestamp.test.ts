@@ -4,7 +4,7 @@ import {
   throws,
 } from "./assert.js"
 
-import type { normalizeTimestamp } from "../../ingestion/timestamp.js"
+import { normalizeTimestamp  } from "../../ingestion/timestamp.js"
 
 import {
   DeterministicRejection,

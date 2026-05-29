@@ -1,4 +1,4 @@
-import type { createHash } from "node:crypto";
+import { createHash  } from "node:crypto";
 
 import type {
   CanonicalExecutionNode,

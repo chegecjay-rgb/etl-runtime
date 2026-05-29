@@ -1,4 +1,4 @@
-import type { createHash } from "node:crypto";
+import { createHash  } from "node:crypto";
 
 import type { CertificationEntry, CertificationLineage, JsonObject, JsonValue, SnapshotReference } from "./types.js";
 

@@ -1,4 +1,4 @@
-import type { createHash } from "node:crypto"
+import { createHash  } from "node:crypto"
 import type { CanonicalEvidence } from "./normalize.js"
 
 export type CanonicalEvidenceSet = Readonly<{

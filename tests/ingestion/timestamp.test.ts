@@ -3,7 +3,7 @@ import {
   throws,
 } from "./assert.js"
 
-import type { normalizeTimestamp } from "../../ingestion/timestamp.js"
+import { normalizeTimestamp  } from "../../ingestion/timestamp.js"
 
 import {
   DeterministicRejection,
@@ -26,7 +26,7 @@ throws(
     ),
   (error: unknown) =>
     error instanceof DeterministicRejection &&
-    error.code === RejectionCode.INVALID_TIMESTAMP,
+    (error as any).code === RejectionCode.INVALID_TIMESTAMP,
   "missing millisecond rejection failed",
 )
 
@@ -37,7 +37,7 @@ throws(
     ),
   (error: unknown) =>
     error instanceof DeterministicRejection &&
-    error.code === RejectionCode.INVALID_TIMESTAMP,
+    (error as any).code === RejectionCode.INVALID_TIMESTAMP,
   "timezone offset rejection failed",
 )
 
@@ -48,7 +48,7 @@ throws(
     ),
   (error: unknown) =>
     error instanceof DeterministicRejection &&
-    error.code === RejectionCode.INVALID_TIMESTAMP,
+    (error as any).code === RejectionCode.INVALID_TIMESTAMP,
   "locale timestamp rejection failed",
 )
 

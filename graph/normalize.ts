@@ -1,6 +1,6 @@
 import type { CanonicalGraph, CanonicalGraphEdge, CanonicalGraphNode } from "./types.js";
 
-import type { sortNodes } from "./sort-nodes.js";
+import { sortNodes } from "./sort-nodes.js";
 
 function sortEdges(
   edges: readonly CanonicalGraphEdge[]

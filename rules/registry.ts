@@ -1,5 +1,5 @@
-import type { deepFreeze, type Immutable } from "./immutable.js";
-import type { normalizeRules, type NormalizedRule } from "./normalize.js";
+import { deepFreeze, type Immutable } from "./immutable.js";
+import { normalizeRules, type NormalizedRule } from "./normalize.js";
 import type { VerificationRule } from "./types.js";
 
 export interface RuleRegistry {

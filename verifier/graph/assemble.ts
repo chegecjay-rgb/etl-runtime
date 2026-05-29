@@ -1,7 +1,7 @@
 import type { CanonicalProjectionRecord } from "../../graph/types.js";
 
 import {
-  projectRecords
+  projectCanonicalDAG
 } from "./project.js";
 
 import {
@@ -14,10 +14,10 @@ export function assembleGraph(
 ) {
 
   const graph =
-    projectRecords(records);
+    projectCanonicalDAG(records);
 
   const certification =
-    validateGraph(graph);
+    validateGraph(graph as any);
 
   return Object.freeze({
     graph,
