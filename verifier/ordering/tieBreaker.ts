@@ -1,6 +1,4 @@
-import {
-  DeterministicOrdering
-} from "../../types/ordering";
+import type { DeterministicOrdering } from "../../types/ordering.js";
 
 export function normalizeLexical(
   value: string

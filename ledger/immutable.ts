@@ -1,4 +1,4 @@
-import { DeepReadonly } from "./types";
+import type { DeepReadonly } from "./types.js";
 
 export function deepFreeze<T>(value: T): DeepReadonly<T> {
   if (value === null || typeof value !== "object") {

@@ -1,10 +1,8 @@
-import {
-  TraversalNode
-} from "../../types/ordering";
+import type { TraversalNode } from "../../types/ordering.js";
 
 import {
   lexicalTieBreak
-} from "./tieBreaker";
+} from "./tieBreaker.js";
 
 export function sortTraversalNodes(
   nodes: readonly TraversalNode[]

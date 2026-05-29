@@ -1,7 +1,4 @@
-import {
-  CanonicalAdjacencyMap,
-  CanonicalGraph
-} from "./types";
+import type { CanonicalAdjacencyMap, CanonicalGraph } from "./types.js";
 
 export function createReverseAdjacencyMap(
   graph: CanonicalGraph

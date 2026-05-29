@@ -1,6 +1,6 @@
 import assert from "node:assert/strict"
 import path from "node:path"
-import { runIsolatedReplay } from "../../replay/isolation/runIsolatedReplay"
+import { runIsolatedReplay  } from "../../replay/isolation/runIsolatedReplay.js"
 
 const environmentA = path.resolve(
   "fixtures/task016/environment-a"
@@ -13,7 +13,7 @@ const environmentB = path.resolve(
 const first = runIsolatedReplay(environmentA)
 const second = runIsolatedReplay(environmentB)
 
-assert.deepEqual(
+assert.deepStrictEqual(
   first.orderedArtifacts,
   [
     "alpha.json",
@@ -21,7 +21,7 @@ assert.deepEqual(
   ]
 )
 
-assert.deepEqual(
+assert.deepStrictEqual(
   second.orderedArtifacts,
   [
     "alpha.json",

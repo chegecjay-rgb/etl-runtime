@@ -1,4 +1,4 @@
-import { createHash } from "node:crypto";
+import { createHash  } from "node:crypto";
 
 function canonicalize(value: unknown): unknown {
   if (Array.isArray(value)) {

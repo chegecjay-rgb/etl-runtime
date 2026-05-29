@@ -1,4 +1,4 @@
-import { ParsedEvidence } from "./parser"
+import type { ParsedEvidence } from "./parser.js"
 
 export type CanonicalEvidence = Readonly<{
   kind: string

@@ -1,0 +1,8 @@
+{
+  "status": "VALID",
+  "payload": {
+    "alpha": "value",
+    "beta": "é",
+    "gamma": "line\r\nvalue"
+  }
+}

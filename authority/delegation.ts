@@ -1,8 +1,8 @@
-import { deepFreeze, type DeepReadonly } from "./immutable";
+import { deepFreeze, type DeepReadonly } from "./immutable.js";
 import type {
   AuthorityTraversalPath,
   DelegationTraversalResult
-} from "./traversal";
+} from "./traversal.js";
 
 export interface DelegationEdge {
   readonly authorityId: string;

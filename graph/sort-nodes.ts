@@ -1,4 +1,4 @@
-import { CanonicalGraphNode } from "./types";
+import type { CanonicalGraphNode } from "./types.js";
 
 export function sortNodes(
   nodes: readonly CanonicalGraphNode[]

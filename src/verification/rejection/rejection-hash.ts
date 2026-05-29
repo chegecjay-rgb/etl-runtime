@@ -1,8 +1,8 @@
-import { createHash } from "crypto";
-import {
-  RejectionManifest,
-  serializeRejectionManifest
-} from "./rejection-manifest";
+
+
+import { createHash  } from "crypto";
+import { serializeRejectionManifest } from "./rejection-manifest.js";
+import type { RejectionManifest } from "./rejection-manifest.js";;
 
 export function computeRejectionHash(
   manifest: RejectionManifest

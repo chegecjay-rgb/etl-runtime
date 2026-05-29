@@ -1,5 +1,5 @@
 import assert from "node:assert/strict"
-import { certifyReplayEquivalence } from "../../replay/certification/certifyReplayEquivalence"
+import { certifyReplayEquivalence  } from "../../replay/certification/certifyReplayEquivalence.js"
 
 const evidence = {
   alpha: {
@@ -22,7 +22,7 @@ const manifest = certifyReplayEquivalence(
   100
 )
 
-assert.deepEqual(
+assert.deepStrictEqual(
   manifest.artifacts,
   [
     "snapshot-a.json",

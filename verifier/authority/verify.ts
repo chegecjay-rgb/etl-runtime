@@ -1,46 +1,46 @@
-import { deepFreeze, type DeepReadonly } from "../../authority/immutable";
+import { deepFreeze, type DeepReadonly } from "../../authority/immutable.js";
 
 import {
   certifyAuthorityVerification,
   type AuthorityCertification
-} from "../../authority/certify";
+} from "../../authority/certify.js";
 
 import {
   verifyAuthorityContinuity,
   type AuthorityContinuityResult
-} from "../../authority/continuity";
+} from "../../authority/continuity.js";
 
 import {
   createDeclarationIndex,
   type AuthorityDeclaration,
   type DeclarationIndex
-} from "../../authority/declarations";
+} from "../../authority/declarations.js";
 
 import {
   verifyDelegationContinuity,
   type DelegationVerificationResult
-} from "../../authority/delegation";
+} from "../../authority/delegation.js";
 
 import {
   createAuthorityHashes,
   type AuthorityHashBundle
-} from "../../authority/hashes";
+} from "../../authority/hashes.js";
 
 import {
   createAuthorityProjectionGraph,
   type AuthorityProjectionEdge,
   type AuthorityProjectionGraph
-} from "../../authority/project";
+} from "../../authority/project.js";
 
 import {
   traverseAuthorityProjection,
   type DelegationTraversalResult
-} from "../../authority/traversal";
+} from "../../authority/traversal.js";
 
 import {
   detectUndeclaredAuthority,
   type UndeclaredDetectionResult
-} from "../../authority/undeclared";
+} from "../../authority/undeclared.js";
 
 export interface VerificationPipelineState {
   readonly declarations: number;

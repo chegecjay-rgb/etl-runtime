@@ -1,12 +1,12 @@
-import { deepFreeze, type Immutable } from "../../rules/immutable";
-import type { RuleContextInput } from "../../rules/context";
+import { deepFreeze, type Immutable } from "../../rules/immutable.js";
+import type { RuleContextInput } from "../../rules/context.js";
 import {
   CONSTITUTIONAL_RULES,
-} from "../../rules/definitions";
+} from "../../rules/definitions.js";
 import {
   verifyRules,
   type VerificationRuntimeResult,
-} from "./verify";
+} from "./verify.js";
 
 export interface ConstitutionalRuntimeResult {
   readonly result: Immutable<VerificationRuntimeResult>;

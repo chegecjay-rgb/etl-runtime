@@ -2,39 +2,39 @@ import assert from "node:assert/strict";
 
 import {
   certifyAuthorityVerification
-} from "../../authority/certify";
+} from "../../authority/certify.js";
 
 import {
   verifyAuthorityContinuity
-} from "../../authority/continuity";
+} from "../../authority/continuity.js";
 
 import {
   createDeclarationIndex
-} from "../../authority/declarations";
+} from "../../authority/declarations.js";
 
 import {
   verifyDelegationContinuity
-} from "../../authority/delegation";
+} from "../../authority/delegation.js";
 
 import {
   createAuthorityDiagnostics
-} from "../../authority/diagnostics";
+} from "../../authority/diagnostics.js";
 
 import {
   createAuthorityHashes
-} from "../../authority/hashes";
+} from "../../authority/hashes.js";
 
 import {
   createAuthorityProjectionGraph
-} from "../../authority/project";
+} from "../../authority/project.js";
 
 import {
   traverseAuthorityProjection
-} from "../../authority/traversal";
+} from "../../authority/traversal.js";
 
 import {
   detectUndeclaredAuthority
-} from "../../authority/undeclared";
+} from "../../authority/undeclared.js";
 
 const declarationIndex = createDeclarationIndex([
   {
@@ -105,7 +105,7 @@ const diagnostics =
     hashes
   );
 
-assert.deepEqual(
+assert.deepStrictEqual(
   diagnostics.replay,
   {
     replayStable: true,
@@ -114,7 +114,7 @@ assert.deepEqual(
   }
 );
 
-assert.deepEqual(
+assert.deepStrictEqual(
   diagnostics.freeze,
   {
     ready: true,

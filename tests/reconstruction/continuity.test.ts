@@ -2,11 +2,11 @@ import {
   reconstructLineage,
   validateContinuity,
   ReconstructionError,
-} from "../../verifier/reconstruction";
+} from "../../verifier/reconstruction.js";
 
 import {
   ensureThrows,
-} from "./helpers";
+} from "./helpers.js";
 
 const validNodes = reconstructLineage([
   {
@@ -46,7 +46,7 @@ ensureThrows(
     ]),
   (error: unknown) =>
     error instanceof ReconstructionError &&
-    error.code ===
+    (error as any).code ===
       "INVALID_RESOLVED_PARENT",
   "continuity validation failed",
 );

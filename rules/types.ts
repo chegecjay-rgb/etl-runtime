@@ -1,5 +1,5 @@
-import type { Immutable } from "./immutable";
-import type { RuleState } from "./states";
+import type { Immutable } from "./immutable.js";
+import type { RuleState } from "./states.js";
 
 export type RuleId = string;
 

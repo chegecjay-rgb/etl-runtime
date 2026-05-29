@@ -1,7 +1,7 @@
 import {
   reject,
   RejectionCode,
-} from "./reject"
+} from "./reject.js"
 
 function validatePrimitive(
   value: unknown,

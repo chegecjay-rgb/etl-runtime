@@ -2,8 +2,8 @@ import assert from "node:assert/strict"
 import {
   createReplayManifest,
   type ReplayManifest
-} from "../manifests/createReplayManifest"
-import type { CanonicalValue } from "../serialization/canonicalStringify"
+} from "../manifests/createReplayManifest.js"
+import type { CanonicalValue } from "../serialization/canonicalStringify.js"
 
 export function certifyReplayEquivalence(
   evidence: CanonicalValue,

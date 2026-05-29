@@ -1,7 +1,7 @@
 import type {
   CanonicalObject,
   CanonicalValue
-} from "../../types/evidence";
+} from "../../types/evidence.js";
 
 type MutableCanonicalObject =
   Record<string, CanonicalValue>;

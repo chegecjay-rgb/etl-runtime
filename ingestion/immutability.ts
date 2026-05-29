@@ -1,7 +1,7 @@
 import {
   reject,
   RejectionCode,
-} from "./reject"
+} from "./reject.js"
 
 export function assertDeepFrozen(
   value: unknown,

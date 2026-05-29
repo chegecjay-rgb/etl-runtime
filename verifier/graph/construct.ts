@@ -1,8 +1,4 @@
-import {
-  CanonicalGraph,
-  CanonicalGraphEdge,
-  CanonicalGraphNode
-} from "../../graph/types";
+import type { CanonicalGraph, CanonicalGraphEdge, CanonicalGraphNode } from "../../graph/types.js";
 
 export function constructCanonicalGraph(
   nodes: readonly CanonicalGraphNode[]

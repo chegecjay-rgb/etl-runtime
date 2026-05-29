@@ -1,6 +1,4 @@
-import {
-  CanonicalGraphNode
-} from "./types";
+import type { CanonicalGraphNode } from "./types.js";
 
 export function depthFirstTraversal(
   roots: readonly CanonicalGraphNode[],

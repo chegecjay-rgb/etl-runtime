@@ -1,8 +1,8 @@
-import { deepFreeze, type DeepReadonly } from "./immutable";
+import { deepFreeze, type DeepReadonly } from "./immutable.js";
 import type {
   DeclarationIndex,
   ResolvedAuthorityDeclaration
-} from "./declarations";
+} from "./declarations.js";
 
 export interface AuthorityProjectionNode {
   readonly nodeId: string;

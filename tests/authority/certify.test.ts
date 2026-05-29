@@ -2,31 +2,31 @@ import assert from "node:assert/strict";
 
 import {
   certifyAuthorityVerification
-} from "../../authority/certify";
+} from "../../authority/certify.js";
 
 import {
   verifyAuthorityContinuity
-} from "../../authority/continuity";
+} from "../../authority/continuity.js";
 
 import {
   createDeclarationIndex
-} from "../../authority/declarations";
+} from "../../authority/declarations.js";
 
 import {
   verifyDelegationContinuity
-} from "../../authority/delegation";
+} from "../../authority/delegation.js";
 
 import {
   createAuthorityProjectionGraph
-} from "../../authority/project";
+} from "../../authority/project.js";
 
 import {
   traverseAuthorityProjection
-} from "../../authority/traversal";
+} from "../../authority/traversal.js";
 
 import {
   detectUndeclaredAuthority
-} from "../../authority/undeclared";
+} from "../../authority/undeclared.js";
 
 const declarationIndex = createDeclarationIndex([
   {
@@ -90,12 +90,12 @@ const replayCertification =
     certification.snapshot
   );
 
-assert.deepEqual(
+assert.deepStrictEqual(
   certification.snapshot,
   replayCertification.snapshot
 );
 
-assert.deepEqual(
+assert.deepStrictEqual(
   certification.equivalence,
   {
     equivalent: true,
@@ -105,7 +105,7 @@ assert.deepEqual(
   }
 );
 
-assert.deepEqual(
+assert.deepStrictEqual(
   certification.diagnostics,
   {
     continuityCount: 3,

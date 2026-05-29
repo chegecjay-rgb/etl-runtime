@@ -2,13 +2,13 @@ import type {
   CanonicalEvidence,
   CanonicalObject,
   CanonicalValue
-} from "../../types/evidence";
+} from "../../types/evidence.js";
 
 import type {
   EvidenceValidator,
   ValidationResult,
   ValidationViolation
-} from "../../types/validation";
+} from "../../types/validation.js";
 
 const createViolation = (
   path: string,

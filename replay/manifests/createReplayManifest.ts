@@ -1,8 +1,8 @@
-import { canonicalHash } from "../hashing/canonicalHash"
+import { canonicalHash  } from "../hashing/canonicalHash.js"
 import {
   canonicalStringify,
   type CanonicalValue
-} from "../serialization/canonicalStringify"
+} from "../serialization/canonicalStringify.js"
 
 export type ReplayManifest = Readonly<{
   replayHash: string

@@ -3,7 +3,7 @@ import assert from "node:assert";
 import {
   EXIT_CODES,
   formatCliOutput
-} from "../../cli/output";
+} from "../../cli/output.js";
 
 const deterministicOutput =
   formatCliOutput({

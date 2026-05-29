@@ -1,0 +1,10 @@
+{
+  "network": "ethereum",
+  "source": "etherscan",
+  "contract": "0x370c37a943b0141c588dfa698921870b31f523d9",
+  "event": "OwnershipTransferred",
+  "topic0": "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0",
+  "previousOwner": "0x0000000000000000000000000000000000000000",
+  "newOwner": "0x1826d8D10F6a6deadDB401Fe2843fdBf34855414",
+  "reputationWarning": true
+}

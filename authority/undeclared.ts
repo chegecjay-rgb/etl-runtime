@@ -1,12 +1,12 @@
-import { deepFreeze, type DeepReadonly } from "./immutable";
+import { deepFreeze, type DeepReadonly } from "./immutable.js";
 import {
   AuthorityStates,
   type AuthorityState
-} from "./states";
+} from "./states.js";
 import type {
   AuthorityContinuityResult,
   ResolvedAuthorityContinuity
-} from "./continuity";
+} from "./continuity.js";
 
 export interface UndeclaredAuthority {
   readonly authorityId: string;

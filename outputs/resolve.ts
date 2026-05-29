@@ -1,7 +1,7 @@
-import {
-  VerificationState,
-  VERIFICATION_STATES
-} from "./states";
+
+
+import { VERIFICATION_STATES } from "./states.js";
+import type { VerificationState } from "./states.js";;
 
 export interface ResolutionInputs {
   readonly hasRuleViolations: boolean;

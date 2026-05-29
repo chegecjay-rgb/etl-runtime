@@ -1,14 +1,14 @@
-import { ReconstructionError } from "./errors";
+import { ReconstructionError } from "./errors.js";
 
 import {
   deepFreeze,
-} from "./immutable";
+} from "./immutable.js";
 
 import type {
   CanonicalEvidenceRecord,
   CanonicalExecutionNode,
   ContinuityState,
-} from "./types";
+} from "./types.js";
 
 function resolveDepth(
   node: CanonicalExecutionNode,

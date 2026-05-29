@@ -1,10 +1,10 @@
 import {
   certifyReplayEquivalence,
-} from "../../reconstruction/certify";
+} from "../../reconstruction/certify.js";
 
 import {
   ensureEqual,
-} from "./helpers";
+} from "./helpers.js";
 
 const baseline = [
   {

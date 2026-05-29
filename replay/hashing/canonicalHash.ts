@@ -1,8 +1,8 @@
-import { createHash } from "node:crypto"
+import { createHash  } from "node:crypto"
 import {
   canonicalStringify,
   type CanonicalValue
-} from "../serialization/canonicalStringify"
+} from "../serialization/canonicalStringify.js"
 
 export function canonicalHash(value: CanonicalValue): string {
   return createHash("sha256")

@@ -2,15 +2,15 @@ import * as assert from 'assert'
 
 import {
   createReplayAttestation,
-} from '../../replay/attestation'
+} from '../../replay/attestation.js'
 
 import {
   exportReplayArtifact,
-} from '../../replay/export'
+} from '../../replay/export.js'
 
 import {
   verifyReplayAttestation,
-} from '../../replay/verify'
+} from '../../replay/verify.js'
 
 const attestation =
   createReplayAttestation(

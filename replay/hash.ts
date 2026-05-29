@@ -1,4 +1,4 @@
-import { createHash } from 'crypto'
+import { createHash  } from 'crypto'
 
 export function hashReplayTraversal(
   traversal: readonly string[]

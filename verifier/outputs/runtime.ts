@@ -1,25 +1,34 @@
-import {
+import type {
   VerificationState
-} from "../../outputs/states";
+} from "../../outputs/states.js";
 
 import {
   deepFreeze
-} from "../../outputs/immutable";
+} from "../../outputs/immutable.js";
 
 import {
-  formatVerificationOutput,
+  formatVerificationOutput
+} from "../../outputs/format.js";
+
+import type {
   FormattedVerificationOutput
-} from "../../outputs/format";
+} from "../../outputs/format.js";
 
 import {
-  certifyOutput,
+  certifyOutput
+} from "../../outputs/certify.js";
+
+import type {
   OutputCertification
-} from "../../outputs/certify";
+} from "../../outputs/certify.js";
 
 import {
-  inspectCertification,
+  inspectCertification
+} from "../../outputs/diagnostics.js";
+
+import type {
   OutputDiagnostics
-} from "../../outputs/diagnostics";
+} from "../../outputs/diagnostics.js";
 
 export interface UnifiedVerificationRuntimeOutput {
   readonly state: VerificationState;

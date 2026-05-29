@@ -1,9 +1,6 @@
-import { immutable } from "./immutable";
+import { immutable  } from "./immutable.js";
 
-import {
-  CertificationEntry,
-  CertificationLineage
-} from "./types";
+import type { CertificationEntry, CertificationLineage } from "./types.js";
 
 export function traverseLineage(
   lineage: CertificationLineage

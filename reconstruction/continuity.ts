@@ -1,8 +1,8 @@
-import { ReconstructionError } from "./errors";
+import { ReconstructionError } from "./errors.js";
 
 import type {
   CanonicalExecutionNode,
-} from "./types";
+} from "./types.js";
 
 export function validateContinuity(
   nodes: readonly CanonicalExecutionNode[],

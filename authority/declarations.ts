@@ -1,11 +1,11 @@
-import { deepFreeze, type DeepReadonly } from "./immutable";
+import { deepFreeze, type DeepReadonly } from "./immutable.js";
 import {
   normalizeAuthorityDescriptor
-} from "./normalize";
+} from "./normalize.js";
 import type {
   AuthorityDescriptor,
   NormalizedAuthorityDescriptor
-} from "./types";
+} from "./types.js";
 
 export interface AuthorityDeclaration {
   readonly nodeId: string;

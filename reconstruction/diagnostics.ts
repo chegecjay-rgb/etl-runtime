@@ -1,6 +1,6 @@
 import type {
   CanonicalExecutionProjection,
-} from "./types";
+} from "./types.js";
 
 export interface ProjectionEquivalenceResult {
   readonly equivalent: boolean;

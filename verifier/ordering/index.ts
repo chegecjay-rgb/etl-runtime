@@ -1,2 +1,2 @@
-export * from "./compare";
-export * from "./order";
+export * from "./compare.js";
+export * from "./order.js";

@@ -1,7 +1,7 @@
-import {
-  canonicalizeEvidence,
-  CanonicalEvidence
-} from "../../verifier/ordering/order";
+
+
+import { canonicalizeEvidence } from "../../verifier/ordering/order.js";
+import type { CanonicalEvidence } from "../../verifier/ordering/order.js";;
 
 function assert(
   condition: boolean,

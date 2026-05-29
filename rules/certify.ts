@@ -1,6 +1,6 @@
-import { deepFreeze, type Immutable } from "./immutable";
-import { canonicalSerialize, hashValue } from "./hashes";
-import type { ExecutionResult } from "./execute";
+import { deepFreeze, type Immutable } from "./immutable.js";
+import { canonicalSerialize, hashValue } from "./hashes.js";
+import type { ExecutionResult } from "./execute.js";
 
 export interface RuleCertification {
   readonly certificationHash: string;

@@ -1,14 +1,14 @@
 import fs from "node:fs"
 import path from "node:path"
-import { canonicalHash } from "../hashing/canonicalHash"
+import { canonicalHash  } from "../hashing/canonicalHash.js"
 import {
   canonicalStringify,
   type CanonicalValue
-} from "../serialization/canonicalStringify"
+} from "../serialization/canonicalStringify.js"
 import {
   createReplayManifest,
   type ReplayManifest
-} from "../manifests/createReplayManifest"
+} from "../manifests/createReplayManifest.js"
 
 export type CertificationBundle = Readonly<{
   manifest: ReplayManifest

@@ -1,11 +1,11 @@
-import { deepFreeze, type DeepReadonly } from "./immutable";
+import { deepFreeze, type DeepReadonly } from "./immutable.js";
 import type {
   AuthorityDescriptor,
   CapabilityId,
   ControlSurfaceId,
   DelegationId,
   NormalizedAuthorityDescriptor
-} from "./types";
+} from "./types.js";
 
 function normalizeStringArray<T extends string>(
   values: readonly T[]

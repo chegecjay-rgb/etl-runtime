@@ -1,5 +1,5 @@
-import type { Immutable } from "./immutable";
-import { deepFreeze } from "./immutable";
+import type { Immutable } from "./immutable.js";
+import { deepFreeze  } from "./immutable.js";
 
 export const RULE_STATES = deepFreeze([
   "VALID",

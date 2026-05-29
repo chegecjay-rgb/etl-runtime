@@ -1,0 +1,40 @@
+export default {
+  testEnvironment: 'node',
+
+  transform: {
+    '^.+\\.tsx?$': [
+      'ts-jest',
+      {
+        useESM: true,
+        tsconfig: {
+          module: 'NodeNext',
+          moduleResolution: 'NodeNext',
+          target: 'ES2022',
+          esModuleInterop: true,
+          allowSyntheticDefaultImports: true
+        }
+      }
+    ]
+  },
+
+  extensionsToTreatAsEsm: ['.ts'],
+
+  moduleNameMapper: {
+    '^(\\.{1,2}/.*)\\.js$': '$1'
+  },
+
+  testMatch: [
+    '**/*.test.ts',
+    '**/*.spec.ts',
+    '**/*.test.js',
+    '**/*.spec.js'
+  ],
+
+  testPathIgnorePatterns: [
+    '/node_modules/',
+    '/\\.task007-build/',
+    '/\\.task009-build/',
+    '/tests/ordering/',
+    '/tests/ledger/'
+  ]
+};

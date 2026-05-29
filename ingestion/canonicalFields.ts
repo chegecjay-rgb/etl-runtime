@@ -1,4 +1,4 @@
-import { reject, RejectionCode } from "./reject"
+import { reject, RejectionCode } from "./reject.js"
 
 export function stableSortedKeys(
   value: Record<string, unknown>,

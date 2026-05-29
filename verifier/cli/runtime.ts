@@ -2,7 +2,7 @@ import fs from "node:fs";
 
 import {
   type CanonicalMachineState
-} from "../../cli/output";
+} from "../../cli/output.js";
 
 export interface RuntimeExecutionResult {
   readonly status: CanonicalMachineState;

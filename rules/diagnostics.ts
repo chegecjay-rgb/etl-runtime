@@ -1,7 +1,7 @@
-import { deepFreeze, type Immutable } from "./immutable";
-import type { RuleCertification } from "./certify";
-import type { ExecutionResult } from "./execute";
-import type { TraversalResult } from "./traversal";
+import { deepFreeze, type Immutable } from "./immutable.js";
+import type { RuleCertification } from "./certify.js";
+import type { ExecutionResult } from "./execute.js";
+import type { TraversalResult } from "./traversal.js";
 
 export interface RuleDiagnostics {
   readonly totalExecutedRules: number;

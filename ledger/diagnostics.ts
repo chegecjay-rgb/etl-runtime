@@ -1,6 +1,6 @@
-import { CertificationLineage, CertificationEntry, SnapshotReference } from "./types";
-import { traverseLineage } from "./traversal";
-import { immutable } from "./immutable";
+import type { CertificationLineage, CertificationEntry, SnapshotReference } from "./types.js";
+import { traverseLineage } from "./traversal.js";
+import { immutable  } from "./immutable.js";
 
 export interface LedgerDiagnosticsReport {
   readonly entryCount: number;

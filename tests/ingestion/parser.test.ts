@@ -2,14 +2,14 @@ import {
   deepEqual,
   equal,
   throws,
-} from "./assert"
+} from "./assert.js"
 
-import { parseEvidence } from "../../ingestion/parser"
+import { parseEvidence  } from "../../ingestion/parser.js"
 
 import {
   DeterministicRejection,
   RejectionCode,
-} from "../../ingestion/reject"
+} from "../../ingestion/reject.js"
 
 const valid = {
   id: "evidence-001",
@@ -46,7 +46,7 @@ throws(
     }),
   (error: unknown) =>
     error instanceof DeterministicRejection &&
-    error.code === RejectionCode.INVALID_TIMESTAMP,
+    (error as any).code === RejectionCode.INVALID_TIMESTAMP,
   "invalid timestamp rejection failed",
 )
 
@@ -58,7 +58,7 @@ throws(
     }),
   (error: unknown) =>
     error instanceof DeterministicRejection &&
-    error.code === RejectionCode.UNSUPPORTED_KIND,
+    (error as any).code === RejectionCode.UNSUPPORTED_KIND,
   "unsupported kind rejection failed",
 )
 
@@ -69,7 +69,7 @@ throws(
     }),
   (error: unknown) =>
     error instanceof DeterministicRejection &&
-    error.code === RejectionCode.INVALID_STRUCTURE,
+    (error as any).code === RejectionCode.INVALID_STRUCTURE,
   "invalid structure rejection failed",
 )
 

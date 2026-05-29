@@ -1,14 +1,14 @@
 import type {
   CanonicalSerializer
-} from "../../types/serialization";
+} from "../../types/serialization.js";
 
 import type {
   CanonicalValue
-} from "../../types/evidence";
+} from "../../types/evidence.js";
 
 import {
   canonicalize
-} from "./canonicalize";
+} from "./canonicalize.js";
 
 const assertSerializable = (
   value: unknown,

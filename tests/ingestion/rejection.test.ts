@@ -1,13 +1,13 @@
 import {
   throws,
-} from "./assert"
+} from "./assert.js"
 
-import { parseEvidence } from "../../ingestion/parser"
+import { parseEvidence  } from "../../ingestion/parser.js"
 
 import {
   DeterministicRejection,
   RejectionCode,
-} from "../../ingestion/reject"
+} from "../../ingestion/reject.js"
 
 const base = {
   id: "evidence",
@@ -28,7 +28,7 @@ throws(
   (error: unknown) =>
     error instanceof
       DeterministicRejection &&
-    error.code ===
+    (error as any).code ===
       RejectionCode.NON_CANONICAL_FIELD,
   "undefined rejection failed",
 )
@@ -46,7 +46,7 @@ throws(
   (error: unknown) =>
     error instanceof
       DeterministicRejection &&
-    error.code ===
+    (error as any).code ===
       RejectionCode.NON_CANONICAL_FIELD,
   "symbol rejection failed",
 )
@@ -63,7 +63,7 @@ throws(
   (error: unknown) =>
     error instanceof
       DeterministicRejection &&
-    error.code ===
+    (error as any).code ===
       RejectionCode.NON_CANONICAL_FIELD,
   "infinity rejection failed",
 )
@@ -79,7 +79,7 @@ throws(
   (error: unknown) =>
     error instanceof
       DeterministicRejection &&
-    error.code ===
+    (error as any).code ===
       RejectionCode.NON_CANONICAL_FIELD,
   "function rejection failed",
 )

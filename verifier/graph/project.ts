@@ -35,3 +35,5 @@ export function projectCanonicalDAG(
     graphHash: "UNSPECIFIED_GRAPH_HASH"
   }
 }
+
+export const projectRecords = projectCanonicalDAG;

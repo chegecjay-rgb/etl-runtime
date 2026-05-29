@@ -1,5 +1,5 @@
 import assert from "node:assert/strict"
-import { canonicalHash } from "../../replay/hashing/canonicalHash"
+import { canonicalHash  } from "../../replay/hashing/canonicalHash.js"
 
 const payloadA = {
   zeta: "last\r\nline",

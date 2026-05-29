@@ -1,6 +1,4 @@
-import {
-  CanonicalGraph
-} from "./types";
+import type { CanonicalGraph } from "./types.js";
 
 export type CanonicalCycle =
   readonly string[];

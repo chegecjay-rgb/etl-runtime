@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 
 import {
   verifyAuthorityPipeline
-} from "../../verifier/authority/verify";
+} from "../../verifier/authority/verify.js";
 
 const result =
   verifyAuthorityPipeline(
@@ -48,7 +48,7 @@ const result =
     ]
   );
 
-assert.deepEqual(
+assert.deepStrictEqual(
   result.pipeline,
   {
     declarations: 2,

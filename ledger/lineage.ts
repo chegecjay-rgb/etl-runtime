@@ -1,13 +1,10 @@
-import { immutable } from "./immutable";
+import { immutable  } from "./immutable.js";
 
-import {
-  CertificationEntry,
-  CertificationLineage
-} from "./types";
+import type { CertificationEntry, CertificationLineage } from "./types.js";
 
 import {
   deterministicHash
-} from "./hashes";
+} from "./hashes.js";
 
 export function createLineage(
   entries: readonly CertificationEntry[]

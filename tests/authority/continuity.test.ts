@@ -2,23 +2,23 @@ import assert from "node:assert/strict";
 
 import {
   verifyAuthorityContinuity
-} from "../../authority/continuity";
+} from "../../authority/continuity.js";
 
 import {
   createDeclarationIndex
-} from "../../authority/declarations";
+} from "../../authority/declarations.js";
 
 import {
   verifyDelegationContinuity
-} from "../../authority/delegation";
+} from "../../authority/delegation.js";
 
 import {
   createAuthorityProjectionGraph
-} from "../../authority/project";
+} from "../../authority/project.js";
 
 import {
   traverseAuthorityProjection
-} from "../../authority/traversal";
+} from "../../authority/traversal.js";
 
 const declarationIndex = createDeclarationIndex([
   {
@@ -63,7 +63,7 @@ const result = verifyAuthorityContinuity(
   delegation
 );
 
-assert.deepEqual(result.states, [
+assert.deepStrictEqual(result.states, [
   {
     authorityId: "executor.alpha",
     state: "VALID"
@@ -78,7 +78,7 @@ assert.deepEqual(result.states, [
   }
 ]);
 
-assert.deepEqual(result.continuity, [
+assert.deepStrictEqual(result.continuity, [
   {
     authorityId: "executor.alpha",
     lineage: ["node-a"],
@@ -96,7 +96,7 @@ assert.deepEqual(result.continuity, [
   }
 ]);
 
-assert.deepEqual(result.violations, []);
+assert.deepStrictEqual(result.violations, []);
 
 assert.equal(
   Object.isFrozen(result),

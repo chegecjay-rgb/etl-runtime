@@ -1,9 +1,9 @@
-import { CanonicalGraph } from "../../graph/types";
-import { validateTopology } from "../../graph/topology";
-import { validateCausality } from "../../graph/causality";
-import { validateOrphans } from "../../graph/orphans";
-import { validateAuthority } from "../../graph/authority";
-import { certifyGraph } from "../../graph/certify";
+import type { CanonicalGraph } from "../../graph/types.js";
+import { validateTopology  } from "../../graph/topology.js";
+import { validateCausality  } from "../../graph/causality.js";
+import { validateOrphans  } from "../../graph/orphans.js";
+import { validateAuthority  } from "../../graph/authority.js";
+import { certifyGraph  } from "../../graph/certify.js";
 
 export function verifyGraph(graph: CanonicalGraph) {
   const validation = Object.freeze({

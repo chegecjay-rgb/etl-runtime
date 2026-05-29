@@ -1,10 +1,10 @@
 import type {
   CanonicalEvidenceRecord,
-} from "./types";
+} from "./types.js";
 
 import {
   deepFreeze,
-} from "./immutable";
+} from "./immutable.js";
 
 function compareEvidence(
   left: CanonicalEvidenceRecord,

@@ -1,18 +1,14 @@
-import { immutable } from "./immutable";
+import { immutable  } from "./immutable.js";
 
-import {
-  CertificationLineage,
-  ReplayCheckpoint,
-  SnapshotReference
-} from "./types";
+import type { CertificationLineage, ReplayCheckpoint, SnapshotReference } from "./types.js";
 
 import {
   deterministicHash
-} from "./hashes";
+} from "./hashes.js";
 
 import {
   createSnapshot
-} from "./snapshots";
+} from "./snapshots.js";
 
 export function createReplayCheckpoint(
   lineage: CertificationLineage
