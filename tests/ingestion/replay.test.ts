@@ -1,11 +1,11 @@
 import {
   deepEqual,
   equal,
-} from "./assert"
+} from "./assert.js"
 
 import {
   certifyReplay,
-} from "../../verifier/ingestion/certify"
+} from "../../verifier/ingestion/certify.js"
 
 const firstOrder = [
   {

@@ -1,6 +1,6 @@
 import {
   CanonicalGraphNode
-} from "./types";
+} from "./types.js";
 
 export function depthFirstTraversal(
   roots: readonly CanonicalGraphNode[],

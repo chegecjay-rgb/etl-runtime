@@ -1,4 +1,4 @@
-import { createHash } from "node:crypto"
+import type { createHash } from "node:crypto"
 
 export type ReplayDiagnostic =
   Readonly<{

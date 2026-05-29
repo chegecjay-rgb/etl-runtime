@@ -1,20 +1,20 @@
-import { deepFreeze, type DeepReadonly } from "./immutable";
+import type { deepFreeze, type DeepReadonly } from "./immutable.js";
 
 import type {
   AuthorityCertification
-} from "./certify";
+} from "./certify.js";
 
 import type {
   AuthorityContinuityResult
-} from "./continuity";
+} from "./continuity.js";
 
 import type {
   AuthorityHashBundle
-} from "./hashes";
+} from "./hashes.js";
 
 import type {
   UndeclaredDetectionResult
-} from "./undeclared";
+} from "./undeclared.js";
 
 export interface ReplayDiagnosticResult {
   readonly replayStable: boolean;

@@ -1,13 +1,13 @@
-import { deepFreeze, type DeepReadonly } from "./immutable";
+import type { deepFreeze, type DeepReadonly } from "./immutable.js";
 import type {
   AuthorityContinuityResult
-} from "./continuity";
+} from "./continuity.js";
 import type {
   DelegationTraversalResult
-} from "./traversal";
+} from "./traversal.js";
 import type {
   UndeclaredDetectionResult
-} from "./undeclared";
+} from "./undeclared.js";
 
 export interface CertificationSnapshot {
   readonly continuityStates: readonly string[];

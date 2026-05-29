@@ -1,9 +1,9 @@
-import { createHash } from "node:crypto";
+import type { createHash } from "node:crypto";
 
 import type {
   CanonicalExecutionNode,
   CanonicalExecutionProjection,
-} from "./types";
+} from "./types.js";
 
 function stableSerialize(value: unknown): string {
   if (

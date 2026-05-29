@@ -1,14 +1,14 @@
-import { CertificationEntry, CertificationLineage, SnapshotReference } from "../../ledger/types";
+import type { CertificationEntry, CertificationLineage, SnapshotReference } from "../../ledger/types.js";
 
-import { createLineage } from "../../ledger/lineage";
-import { createSnapshot } from "../../ledger/snapshots";
-import { createReplayCheckpoint } from "../../ledger/history";
-import { exportLedger } from "../../ledger/export";
+import type { createLineage } from "../../ledger/lineage.js";
+import type { createSnapshot } from "../../ledger/snapshots.js";
+import type { createReplayCheckpoint } from "../../ledger/history.js";
+import type { exportLedger } from "../../ledger/export.js";
 import {
   generateLedgerReport,
   validateLineageIntegrity,
   validateReplayContinuity
-} from "../../ledger/diagnostics";
+} from "../../ledger/diagnostics.js";
 
 export interface LedgerBuildInput {
   readonly entries: readonly CertificationEntry[];

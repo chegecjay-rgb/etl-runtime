@@ -1,13 +1,13 @@
 import {
   throws,
-} from "./assert"
+} from "./assert.js"
 
-import { parseEvidence } from "../../ingestion/parser"
+import type { parseEvidence } from "../../ingestion/parser.js"
 
 import {
   DeterministicRejection,
   RejectionCode,
-} from "../../ingestion/reject"
+} from "../../ingestion/reject.js"
 
 const base = {
   id: "evidence",

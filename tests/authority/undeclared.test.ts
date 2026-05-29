@@ -2,11 +2,11 @@ import assert from "node:assert/strict";
 
 import {
   detectUndeclaredAuthority
-} from "../../authority/undeclared";
+} from "../../authority/undeclared.js";
 
 import type {
   AuthorityContinuityResult
-} from "../../authority/continuity";
+} from "../../authority/continuity.js";
 
 const continuityResult: AuthorityContinuityResult = Object.freeze({
   states: Object.freeze([
@@ -38,7 +38,7 @@ const result = detectUndeclaredAuthority(
   continuityResult
 );
 
-assert.deepEqual(result.undeclared, [
+assert.deepStrictEqual(result.undeclared, [
   {
     authorityId: "executor.unknown",
     lineage: [],
@@ -46,14 +46,14 @@ assert.deepEqual(result.undeclared, [
   }
 ]);
 
-assert.deepEqual(result.paths, [
+assert.deepStrictEqual(result.paths, [
   {
     authorityId: "executor.unknown",
     visitedNodeIds: []
   }
 ]);
 
-assert.deepEqual(result.discontinuities, [
+assert.deepStrictEqual(result.discontinuities, [
   {
     authorityId: "executor.unknown",
     reason: "UNDECLARED",

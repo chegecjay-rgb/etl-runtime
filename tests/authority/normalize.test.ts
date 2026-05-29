@@ -5,7 +5,7 @@ import {
   normalizeCapabilities,
   normalizeControlSurfaces,
   normalizeDelegations
-} from "../../authority/normalize";
+} from "../../authority/normalize.js";
 
 const descriptor = normalizeAuthorityDescriptor({
   authorityId: " executor.alpha ",
@@ -29,7 +29,7 @@ const descriptor = normalizeAuthorityDescriptor({
 
 assert.equal(descriptor.authorityId, "executor.alpha");
 
-assert.deepEqual(
+assert.deepStrictEqual(
   descriptor.capabilities,
   normalizeCapabilities([
     "mint",
@@ -39,7 +39,7 @@ assert.deepEqual(
   ])
 );
 
-assert.deepEqual(
+assert.deepStrictEqual(
   descriptor.delegations,
   normalizeDelegations([
     "delegate.beta",
@@ -47,7 +47,7 @@ assert.deepEqual(
   ])
 );
 
-assert.deepEqual(
+assert.deepStrictEqual(
   descriptor.controlSurfaces,
   normalizeControlSurfaces([
     "treasury",

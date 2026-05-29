@@ -1,11 +1,11 @@
 import {
   canonicalizeEvidence,
   deepFreeze,
-} from "../../verifier/reconstruction";
+} from "../../verifier/reconstruction.js";
 
 import {
   ensureEqual,
-} from "./helpers";
+} from "./helpers.js";
 
 const unordered = [
   {

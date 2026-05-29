@@ -1,22 +1,22 @@
 import {
   canonicalizeEvidence,
-} from "./ordering";
+} from "./ordering.js";
 
 import {
   reconstructLineage,
-} from "./lineage";
+} from "./lineage.js";
 
 import {
   createExecutionProjection,
-} from "./projection";
+} from "./projection.js";
 
 import {
   compareProjections,
-} from "./diagnostics";
+} from "./diagnostics.js";
 
 import type {
   CanonicalEvidenceRecord,
-} from "./types";
+} from "./types.js";
 
 export interface ReplayCertificationResult {
   readonly equivalent: boolean;

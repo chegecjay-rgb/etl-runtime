@@ -10,7 +10,7 @@ export type CanonicalOrphanValidation = Readonly<{
 
 import {
   CanonicalGraph
-} from "./types";
+} from "./types.js";
 
 export function validateOrphans(
   graph: CanonicalGraph

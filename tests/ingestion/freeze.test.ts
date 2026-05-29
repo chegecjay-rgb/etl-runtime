@@ -1,11 +1,11 @@
 import {
   equal,
-} from "./assert"
+} from "./assert.js"
 
 import {
   ingestEvidence,
   certifyReplay,
-} from "../../verifier/ingestion"
+} from "../../verifier/ingestion.js"
 
 const evidence = [
   {

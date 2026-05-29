@@ -1,6 +1,6 @@
 import type {
   DeepReadonly
-} from "../../types/readonly";
+} from "../../types/readonly.js";
 
 export interface ImmutableFreezer {
   freeze<T>(

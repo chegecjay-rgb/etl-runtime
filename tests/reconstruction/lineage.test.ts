@@ -1,12 +1,12 @@
 import {
   reconstructLineage,
   ReconstructionError,
-} from "../../verifier/reconstruction";
+} from "../../verifier/reconstruction.js";
 
 import {
   ensureEqual,
   ensureThrows,
-} from "./helpers";
+} from "./helpers.js";
 
 const lineage = reconstructLineage([
   {

@@ -1,4 +1,4 @@
-import { RejectionCode } from "./rejection-codes";
+import type { RejectionCode } from "./rejection-codes.js";
 
 export interface DeterministicFailure {
   readonly status: "REJECTED";

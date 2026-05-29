@@ -1,11 +1,11 @@
 import {
   CanonicalGraph,
   CanonicalGraphNode
-} from "./types";
+} from "./types.js";
 
 import {
   normalizeGraph
-} from "./normalize";
+} from "./normalize.js";
 
 function compareText(left: string, right: string): number {
   return left.localeCompare(right, "en");

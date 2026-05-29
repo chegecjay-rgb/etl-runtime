@@ -1,8 +1,8 @@
-import { createHash } from "node:crypto";
+import type { createHash } from "node:crypto";
 
 import {
   stableSerialize
-} from "./format";
+} from "./format.js";
 
 export interface OutputCertification {
   readonly hash: string;

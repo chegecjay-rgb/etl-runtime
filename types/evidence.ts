@@ -1,10 +1,10 @@
 import type {
   CanonicalEvidenceIdentifier
-} from "./identifiers";
+} from "./identifiers.js";
 
 import type {
   DeepReadonly
-} from "./readonly";
+} from "./readonly.js";
 
 export type EvidenceKind =
   | "DISCLOSURE"

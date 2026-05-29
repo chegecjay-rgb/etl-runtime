@@ -2,15 +2,15 @@ import assert from "node:assert/strict";
 
 import {
   createDeclarationIndex
-} from "../../authority/declarations";
+} from "../../authority/declarations.js";
 
 import {
   createAuthorityProjectionGraph
-} from "../../authority/project";
+} from "../../authority/project.js";
 
 import {
   traverseAuthorityProjection
-} from "../../authority/traversal";
+} from "../../authority/traversal.js";
 
 const declarationIndex = createDeclarationIndex([
   {
@@ -63,12 +63,12 @@ const graph = createAuthorityProjectionGraph(
 const firstTraversal = traverseAuthorityProjection(graph);
 const secondTraversal = traverseAuthorityProjection(graph);
 
-assert.deepEqual(
+assert.deepStrictEqual(
   firstTraversal,
   secondTraversal
 );
 
-assert.deepEqual(firstTraversal.traversal, [
+assert.deepStrictEqual(firstTraversal.traversal, [
   {
     nodeId: "node-a",
     authorityId: "executor.alpha",
@@ -133,7 +133,7 @@ assert.equal(
   true
 );
 
-assert.deepEqual(
+assert.deepStrictEqual(
   firstTraversal.traversal.map(
     (entry) => entry.nodeId
   ),

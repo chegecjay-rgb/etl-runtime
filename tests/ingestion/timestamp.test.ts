@@ -1,14 +1,14 @@
 import {
   equal,
   throws,
-} from "./assert"
+} from "./assert.js"
 
-import { normalizeTimestamp } from "../../ingestion/timestamp"
+import type { normalizeTimestamp } from "../../ingestion/timestamp.js"
 
 import {
   DeterministicRejection,
   RejectionCode,
-} from "../../ingestion/reject"
+} from "../../ingestion/reject.js"
 
 const canonical =
   "2026-01-01T00:00:00.000Z"

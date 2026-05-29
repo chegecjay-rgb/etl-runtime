@@ -3,7 +3,7 @@ import {
   CanonicalGraphEdge,
   CanonicalGraphNode,
   CanonicalProjectionRecord
-} from "../types";
+} from "../types.js";
 
 export function projectCanonicalGraph(
   records: readonly CanonicalProjectionRecord[]

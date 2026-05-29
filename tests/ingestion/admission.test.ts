@@ -1,9 +1,9 @@
 import {
   deepEqual,
   equal,
-} from "./assert"
+} from "./assert.js"
 
-import { admitEvidence } from "../../ingestion/admission"
+import type { admitEvidence } from "../../ingestion/admission.js"
 
 const input = [
   {

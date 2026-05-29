@@ -1,6 +1,6 @@
 import type {
   CanonicalEvidence
-} from "../types/evidence";
+} from "../types/evidence.js";
 
 export interface NormalizationInput {
   readonly source: unknown;

@@ -2,23 +2,23 @@ import crypto from "crypto";
 
 import {
   CanonicalGraph
-} from "./types";
+} from "./types.js";
 
 import {
   normalizeGraph
-} from "./normalize";
+} from "./normalize.js";
 
 import {
   validateCausality
-} from "./causality";
+} from "./causality.js";
 
 import {
   validateOrphans
-} from "./orphans";
+} from "./orphans.js";
 
 import {
   validateAuthority
-} from "./authority";
+} from "./authority.js";
 
 export type CanonicalCertification =
   Readonly<{

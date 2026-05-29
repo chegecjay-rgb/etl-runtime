@@ -1,15 +1,15 @@
-import { createHash } from "node:crypto";
+import type { createHash } from "node:crypto";
 
-import { deepFreeze, type DeepReadonly } from "./immutable";
+import type { deepFreeze, type DeepReadonly } from "./immutable.js";
 import type {
   CertificationSnapshot
-} from "./certify";
+} from "./certify.js";
 import type {
   AuthorityContinuityResult
-} from "./continuity";
+} from "./continuity.js";
 import type {
   DelegationTraversalResult
-} from "./traversal";
+} from "./traversal.js";
 
 export interface AuthorityHash {
   readonly algorithm: "sha256";

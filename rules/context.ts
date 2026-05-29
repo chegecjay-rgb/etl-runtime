@@ -1,5 +1,5 @@
-import { deepFreeze, type Immutable } from "./immutable";
-import { hashValue } from "./hashes";
+import type { deepFreeze, type Immutable } from "./immutable.js";
+import type { hashValue } from "./hashes.js";
 
 export interface RuleEvaluationContext {
   readonly graphHash: string;

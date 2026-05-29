@@ -1,9 +1,9 @@
-import { deepFreeze, type DeepReadonly } from "./immutable";
+import type { deepFreeze, type DeepReadonly } from "./immutable.js";
 import type {
   AuthorityProjectionEdge,
   AuthorityProjectionGraph,
   AuthorityProjectionNode
-} from "./project";
+} from "./project.js";
 
 export interface AuthorityTraversalNode {
   readonly nodeId: string;

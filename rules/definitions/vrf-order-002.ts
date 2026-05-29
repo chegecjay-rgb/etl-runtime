@@ -1,9 +1,9 @@
-import { deepFreeze, type Immutable } from "../immutable";
-import type { RuleEvaluationContext } from "../context";
+import type { deepFreeze, type Immutable } from "../immutable.js";
+import type { RuleEvaluationContext } from "../context.js";
 import type {
   RuleResult,
   VerificationRule,
-} from "../types";
+} from "../types.js";
 
 function buildResult(
   state: RuleResult["state"],

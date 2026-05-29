@@ -1,32 +1,32 @@
 export {
   parseEvidence,
-} from "./parser"
+} from "./parser.js"
 
 export {
   admitEvidence,
-} from "./admission"
+} from "./admission.js"
 
 export {
   normalizeEvidence,
-} from "./normalize"
+} from "./normalize.js"
 
 export {
   buildCanonicalEvidenceSet,
-} from "./evidenceSet"
+} from "./evidenceSet.js"
 
 export {
   normalizeTimestamp,
-} from "./timestamp"
+} from "./timestamp.js"
 
 export {
   assertDeepFrozen,
-} from "./immutability"
+} from "./immutability.js"
 
 export {
   buildReplayDiagnostic,
-} from "./diagnostics"
+} from "./diagnostics.js"
 
 export {
   DeterministicRejection,
   RejectionCode,
-} from "./reject"
+} from "./reject.js"

@@ -1,10 +1,10 @@
 import {
   CanonicalGraph
-} from "../../graph/types";
+} from "../../graph/types.js";
 
 import {
   certifyGraph
-} from "../../graph/certify";
+} from "../../graph/certify.js";
 
 export function validateGraph(
   graph: CanonicalGraph

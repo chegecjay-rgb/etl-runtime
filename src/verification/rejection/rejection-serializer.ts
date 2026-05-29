@@ -1,7 +1,7 @@
 import {
   RejectionManifest,
   serializeRejectionManifest
-} from "./rejection-manifest";
+} from "./rejection-manifest.js";
 
 export interface SerializedRejectionArtifact {
   readonly stdout: "";

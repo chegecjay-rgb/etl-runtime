@@ -1,11 +1,11 @@
 import fs from "node:fs"
 import path from "node:path"
 
-import { canonicalHash } from "../replay/hashing/canonicalHash"
+import type { canonicalHash } from "../replay/hashing/canonicalHash.js"
 import {
   canonicalStringify,
   type CanonicalValue
-} from "../replay/serialization/canonicalStringify"
+} from "../replay/serialization/canonicalStringify.js"
 
 export type CompilerAttestation = Readonly<{
   tsconfigPath: string

@@ -2,7 +2,7 @@ import {
   CanonicalGraph,
   CanonicalGraphEdge,
   CanonicalGraphNode
-} from "../../graph/types";
+} from "../../graph/types.js";
 
 export function constructCanonicalGraph(
   nodes: readonly CanonicalGraphNode[]

@@ -2,7 +2,7 @@ import * as assert from 'assert'
 
 import {
   ReplayAttestation,
-} from './attestation'
+} from './attestation.js'
 
 export function verifyReplayAttestation(
   attestation: ReplayAttestation

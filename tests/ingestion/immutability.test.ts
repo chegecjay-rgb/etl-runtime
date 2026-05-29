@@ -1,10 +1,10 @@
 import {
   equal,
-} from "./assert"
+} from "./assert.js"
 
 import {
   admitEvidence,
-} from "../../ingestion/admission"
+} from "../../ingestion/admission.js"
 
 const admitted =
   admitEvidence([

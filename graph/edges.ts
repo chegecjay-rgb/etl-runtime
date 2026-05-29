@@ -1,7 +1,7 @@
 import {
   CanonicalGraph,
   CanonicalGraphEdge
-} from "./types";
+} from "./types.js";
 
 export function deriveCanonicalEdges(
   graph: CanonicalGraph

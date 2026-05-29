@@ -1,6 +1,6 @@
 import {
   OutputCertification
-} from "./certify";
+} from "./certify.js";
 
 export interface OutputDiagnostics {
   readonly state: string;

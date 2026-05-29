@@ -2,19 +2,19 @@ import assert from "node:assert/strict";
 
 import {
   createDeclarationIndex
-} from "../../authority/declarations";
+} from "../../authority/declarations.js";
 
 import {
   verifyDelegationContinuity
-} from "../../authority/delegation";
+} from "../../authority/delegation.js";
 
 import {
   createAuthorityProjectionGraph
-} from "../../authority/project";
+} from "../../authority/project.js";
 
 import {
   traverseAuthorityProjection
-} from "../../authority/traversal";
+} from "../../authority/traversal.js";
 
 const declarationIndex = createDeclarationIndex([
   {
@@ -55,7 +55,7 @@ const result = verifyDelegationContinuity(
   traversal
 );
 
-assert.deepEqual(result.lineages, [
+assert.deepStrictEqual(result.lineages, [
   {
     authorityId: "executor.alpha",
     lineage: ["node-a"]
@@ -70,7 +70,7 @@ assert.deepEqual(result.lineages, [
   }
 ]);
 
-assert.deepEqual(result.states, [
+assert.deepStrictEqual(result.states, [
   {
     authorityId: "executor.alpha",
     valid: true
@@ -85,7 +85,7 @@ assert.deepEqual(result.states, [
   }
 ]);
 
-assert.deepEqual(result.paths, [
+assert.deepStrictEqual(result.paths, [
   {
     authorityId: "executor.alpha",
     visitedNodeIds: ["node-a"]

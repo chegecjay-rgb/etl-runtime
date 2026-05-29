@@ -1,14 +1,14 @@
 import {
   reconstructLineage,
-} from "../../verifier/reconstruction";
+} from "../../verifier/reconstruction.js";
 
 import {
   normalizeProjectionNodes,
-} from "../../reconstruction/normalize";
+} from "../../reconstruction/normalize.js";
 
 import {
   ensureEqual,
-} from "./helpers";
+} from "./helpers.js";
 
 const nodes = reconstructLineage([
   {

@@ -2,11 +2,11 @@ import {
   reconstructLineage,
   validateContinuity,
   ReconstructionError,
-} from "../../verifier/reconstruction";
+} from "../../verifier/reconstruction.js";
 
 import {
   ensureThrows,
-} from "./helpers";
+} from "./helpers.js";
 
 const validNodes = reconstructLineage([
   {

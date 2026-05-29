@@ -1,15 +1,15 @@
 import {
   validateCliArguments
-} from "./validate";
+} from "./validate.js";
 
 import {
   emitCliOutput,
   EXIT_CODES
-} from "./output";
+} from "./output.js";
 
 import {
   executeVerifierRuntime
-} from "../verifier/cli/runtime";
+} from "../verifier/cli/runtime.js";
 
 type ExitCode =
   (typeof EXIT_CODES)[

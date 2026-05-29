@@ -1,6 +1,6 @@
 import type {
   CanonicalValue
-} from "./evidence";
+} from "./evidence.js";
 
 export interface CanonicalSerializer {
   serialize(

@@ -1,14 +1,14 @@
 import {
   CanonicalProjectionRecord
-} from "../../graph/types";
+} from "../../graph/types.js";
 
 import {
   projectRecords
-} from "./project";
+} from "./project.js";
 
 import {
   validateGraph
-} from "./validate";
+} from "./validate.js";
 
 export function assembleGraph(
   records:

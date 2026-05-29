@@ -1,6 +1,6 @@
 import {
   DeterministicOrdering
-} from "../../types/ordering";
+} from "../../types/ordering.js";
 
 export interface CanonicalEvidence {
   readonly id: string;

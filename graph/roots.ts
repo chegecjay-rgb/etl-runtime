@@ -1,10 +1,10 @@
 import {
   CanonicalGraphNode,
-} from './types'
+} from './types.js'
 
 import {
   sortTraversalRoots,
-} from './traversal'
+} from './traversal.js'
 
 export function extractRootNodeIds(
   nodes: readonly CanonicalGraphNode[]

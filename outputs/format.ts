@@ -1,6 +1,6 @@
 import {
   VerificationState
-} from "./states";
+} from "./states.js";
 
 export interface FormattedVerificationOutput {
   readonly state: VerificationState;

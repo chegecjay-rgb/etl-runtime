@@ -1,6 +1,6 @@
-import { CanonicalGraph } from "./types";
+import type { CanonicalGraph } from "./types.js";
 
-import { ConsistencyState } from "./states";
+import type { ConsistencyState } from "./states.js";
 
 export interface TopologyValidation {
   readonly state: ConsistencyState;

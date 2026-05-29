@@ -1,6 +1,6 @@
 import {
   CanonicalGraph
-} from "./types";
+} from "./types.js";
 
 export function replayEquals(
   left: CanonicalGraph,

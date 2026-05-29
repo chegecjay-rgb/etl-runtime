@@ -3,7 +3,7 @@ import fs from "node:fs"
 import os from "node:os"
 import path from "node:path"
 
-import { createCertificationBundle } from "../../replay/certification/createCertificationBundle"
+import type { createCertificationBundle } from "../../replay/certification/createCertificationBundle.js"
 
 const tempRoot = fs.mkdtempSync(
   path.join(os.tmpdir(), "task016-certification-")
@@ -49,7 +49,7 @@ assert.equal(
   bundleB.manifest.replayHash
 )
 
-assert.deepEqual(
+assert.deepStrictEqual(
   bundleA.manifest.artifacts,
   bundleB.manifest.artifacts
 )

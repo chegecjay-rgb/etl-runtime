@@ -1,6 +1,6 @@
 import type {
   CanonicalExecutionNode,
-} from "./types";
+} from "./types.js";
 
 function compareNodes(
   left: CanonicalExecutionNode,

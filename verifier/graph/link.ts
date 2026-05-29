@@ -1,7 +1,7 @@
 import {
   CanonicalGraph,
   CanonicalGraphEdge
-} from "../../graph/types";
+} from "../../graph/types.js";
 
 export function linkGraph(
   graph: CanonicalGraph

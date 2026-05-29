@@ -5,7 +5,7 @@ import {
   lookupAuthorityDeclaration,
   projectDeclarationIndex,
   resolveAuthorityDeclarations
-} from "../../authority/declarations";
+} from "../../authority/declarations.js";
 
 const declarations = [
   {
@@ -51,7 +51,7 @@ assert.equal(
 
 const projection = projectDeclarationIndex(index);
 
-assert.deepEqual(projection, [
+assert.deepStrictEqual(projection, [
   {
     nodeId: "node-a",
     authorityId: "executor.alpha"

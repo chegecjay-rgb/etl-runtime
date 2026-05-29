@@ -1,10 +1,10 @@
-import { deepEqual } from "./assert"
+import type { deepEqual } from "./assert.js"
 
-import { buildCanonicalEvidenceSet } from "../../ingestion/evidenceSet"
+import type { buildCanonicalEvidenceSet } from "../../ingestion/evidenceSet.js"
 
-import { normalizeEvidence } from "../../ingestion/normalize"
+import type { normalizeEvidence } from "../../ingestion/normalize.js"
 
-import { parseEvidence } from "../../ingestion/parser"
+import type { parseEvidence } from "../../ingestion/parser.js"
 
 const first = normalizeEvidence(
   parseEvidence({

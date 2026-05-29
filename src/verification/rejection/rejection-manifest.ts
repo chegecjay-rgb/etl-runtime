@@ -1,5 +1,5 @@
-import { createHash } from "crypto";
-import { DeterministicFailure } from "./deterministic-failure";
+import type { createHash } from "crypto";
+import type { DeterministicFailure } from "./deterministic-failure.js";
 
 export interface RejectionManifest {
   readonly version: "TASK-017";

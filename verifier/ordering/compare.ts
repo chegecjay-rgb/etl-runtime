@@ -1,6 +1,6 @@
 import {
   DeterministicOrdering
-} from "../../types/ordering";
+} from "../../types/ordering.js";
 
 export type Comparator<T> = (
   left: Readonly<T>,

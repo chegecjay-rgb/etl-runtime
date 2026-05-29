@@ -4,7 +4,7 @@ import assert from "node:assert";
 
 import {
   executeVerifierRuntime
-} from "../../verifier/cli/runtime";
+} from "../../verifier/cli/runtime.js";
 
 const fixturesDirectory = path.resolve(
   "fixtures/task015"

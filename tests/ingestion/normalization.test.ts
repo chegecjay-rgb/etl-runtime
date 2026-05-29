@@ -1,8 +1,8 @@
-import { deepEqual } from "./assert"
+import type { deepEqual } from "./assert.js"
 
-import { normalizeEvidence } from "../../ingestion/normalize"
+import type { normalizeEvidence } from "../../ingestion/normalize.js"
 
-import { parseEvidence } from "../../ingestion/parser"
+import type { parseEvidence } from "../../ingestion/parser.js"
 
 const a = parseEvidence({
   id: "evidence-a",

@@ -1,4 +1,4 @@
-import { admitEvidence } from "../../ingestion/admission"
+import type { admitEvidence } from "../../ingestion/admission.js"
 
 export function ingestEvidence(
   evidence: readonly unknown[],

@@ -1,13 +1,13 @@
-import { immutable } from "./immutable";
+import type { immutable } from "./immutable.js";
 
 import {
   CertificationLineage,
   SnapshotReference
-} from "./types";
+} from "./types.js";
 
 import {
   deterministicHash
-} from "./hashes";
+} from "./hashes.js";
 
 export function createSnapshot(
   lineage: CertificationLineage

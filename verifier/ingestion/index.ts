@@ -1,7 +1,7 @@
 export {
   ingestEvidence,
-} from "./ingest"
+} from "./ingest.js"
 
 export {
   certifyReplay,
-} from "./certify"
+} from "./certify.js"

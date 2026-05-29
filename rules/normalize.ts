@@ -1,8 +1,8 @@
-import { deepFreeze, type Immutable } from "./immutable";
+import type { deepFreeze, type Immutable } from "./immutable.js";
 import type {
   EvaluationScope,
   VerificationRule,
-} from "./types";
+} from "./types.js";
 
 export interface NormalizedRule {
   readonly ruleId: string;

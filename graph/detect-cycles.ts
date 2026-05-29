@@ -1,11 +1,11 @@
 import {
   CanonicalGraph,
   CanonicalGraphNode
-} from "./types";
+} from "./types.js";
 
 import {
   buildAdjacencyMap
-} from "./adjacency-map";
+} from "./adjacency-map.js";
 
 export type CanonicalCycle = Readonly<{
   path: readonly string[];

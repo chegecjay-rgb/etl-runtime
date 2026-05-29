@@ -1,7 +1,7 @@
 import {
   VerificationState,
   VERIFICATION_STATES
-} from "./states";
+} from "./states.js";
 
 export interface ResolutionInputs {
   readonly hasRuleViolations: boolean;

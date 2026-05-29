@@ -1,10 +1,10 @@
-import { createHash } from "node:crypto";
+import type { createHash } from "node:crypto";
 
 import type {
   CanonicalEvidenceIdentifier,
   IdentifierDerivationInput,
   IdentifierDeriver
-} from "../../types/identifiers";
+} from "../../types/identifiers.js";
 
 const assertNonEmpty = (
   value: string,

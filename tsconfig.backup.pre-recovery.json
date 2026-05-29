@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "types": ["node"]
+  },
+  "include": [
+    "authority/**/*.ts",
+    "cli/**/*.ts",
+    "graph/**/*.ts",
+    "ingestion/**/*.ts",
+    "ledger/**/*.ts",
+    "outputs/**/*.ts",
+    "reconstruction/**/*.ts",
+    "replay/**/*.ts",
+    "rules/**/*.ts",
+    "types/**/*.ts",
+    "verifier/**/*.ts",
+    "tests/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "dist-runtime",
+    ".task007-build",
+    ".task009-build",
+    "scratch",
+    "tmp"
+  ]
+}

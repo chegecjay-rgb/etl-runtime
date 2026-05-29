@@ -2,12 +2,12 @@ import assert from "node:assert/strict";
 
 import {
   createDeclarationIndex
-} from "../../authority/declarations";
+} from "../../authority/declarations.js";
 
 import {
   createAuthorityProjectionGraph,
   projectAuthorityPaths
-} from "../../authority/project";
+} from "../../authority/project.js";
 
 const declarationIndex = createDeclarationIndex([
   {
@@ -44,7 +44,7 @@ const graph = createAuthorityProjectionGraph(
   ]
 );
 
-assert.deepEqual(graph.nodes, [
+assert.deepStrictEqual(graph.nodes, [
   {
     nodeId: "node-a",
     authorityId: "executor.alpha"
@@ -55,7 +55,7 @@ assert.deepEqual(graph.nodes, [
   }
 ]);
 
-assert.deepEqual(graph.edges, [
+assert.deepStrictEqual(graph.edges, [
   {
     fromNodeId: "node-a",
     toNodeId: "node-b"
@@ -68,7 +68,7 @@ assert.deepEqual(graph.edges, [
 
 const paths = projectAuthorityPaths(graph);
 
-assert.deepEqual(paths, [
+assert.deepStrictEqual(paths, [
   {
     authorityId: "executor.alpha",
     nodePath: ["node-a"]

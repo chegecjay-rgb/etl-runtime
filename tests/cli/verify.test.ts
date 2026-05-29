@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import assert from "node:assert";
-import { spawnSync } from "node:child_process";
+import type { spawnSync } from "node:child_process";
 
 const fixturesDirectory =
   path.resolve(

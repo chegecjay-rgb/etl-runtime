@@ -1,19 +1,19 @@
-import { immutable } from "./immutable";
+import type { immutable } from "./immutable.js";
 
 import {
   CertificationLineage,
   ImmutableLedgerExport,
   ReplayCheckpoint,
   SnapshotReference
-} from "./types";
+} from "./types.js";
 
 import {
   deterministicHash
-} from "./hashes";
+} from "./hashes.js";
 
 import {
   traverseLineage
-} from "./traversal";
+} from "./traversal.js";
 
 function collectSnapshots(
   checkpoints: readonly ReplayCheckpoint[]

@@ -1,6 +1,6 @@
-import { deepFreeze, type Immutable } from "./immutable";
-import type { NormalizedRule } from "./normalize";
-import type { RuleRegistry } from "./registry";
+import type { deepFreeze, type Immutable } from "./immutable.js";
+import type { NormalizedRule } from "./normalize.js";
+import type { RuleRegistry } from "./registry.js";
 
 export interface TraversalResult {
   readonly orderedRuleIds: ReadonlyArray<string>;

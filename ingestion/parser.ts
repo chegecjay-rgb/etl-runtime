@@ -1,23 +1,23 @@
 import {
   ensurePlainObject,
   stableSortedKeys,
-} from "./canonicalFields"
+} from "./canonicalFields.js"
 
 import {
   reject,
   RejectionCode,
-} from "./reject"
+} from "./reject.js"
 
 import {
   CanonicalEvidenceInput,
   EvidenceKind,
-} from "./schemas"
+} from "./schemas.js"
 
-import { normalizeTimestamp } from "./timestamp"
+import type { normalizeTimestamp } from "./timestamp.js"
 
 import {
   validateCanonicalValue,
-} from "./validators"
+} from "./validators.js"
 
 const SUPPORTED_KINDS:
   readonly EvidenceKind[] =

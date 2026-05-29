@@ -1,23 +1,28 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "module": "commonjs",
-    "moduleResolution": "Node",
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "strict": true,
-    "isolatedModules": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true,
-    "ignoreDeprecations": "6.0",
-    "types": [
-      "jest",
-      "node"
-    ],
+    "noImplicitAny": false,
     "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true,
+    "types": [
+      "node",
+      "vitest/globals"
+    ],
+    "outDir": "./dist"
   },
   "include": [
-    "src",
-    "tests"
+    "**/*.ts"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules",
+    ".task009-build"
   ]
 }

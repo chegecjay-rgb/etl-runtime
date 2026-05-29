@@ -4,13 +4,13 @@ import {
   AUTHORITY_STATE_ORDER,
   AuthorityStates,
   isAuthorityState
-} from "../../authority/states";
+} from "../../authority/states.js";
 
 assert.equal(isAuthorityState(AuthorityStates.VALID), true);
 assert.equal(isAuthorityState(AuthorityStates.INVALID), true);
 assert.equal(isAuthorityState("BROKEN"), false);
 
-assert.deepEqual(AUTHORITY_STATE_ORDER, [
+assert.deepStrictEqual(AUTHORITY_STATE_ORDER, [
   AuthorityStates.INVALID,
   AuthorityStates.UNDECLARED,
   AuthorityStates.UNKNOWN,

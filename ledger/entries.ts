@@ -1,14 +1,14 @@
-import { immutable } from "./immutable";
+import type { immutable } from "./immutable.js";
 
 import {
   CertificationArtifact,
   CertificationEntry,
   JsonValue
-} from "./types";
+} from "./types.js";
 
 import {
   deterministicHash
-} from "./hashes";
+} from "./hashes.js";
 
 export interface CreateEntryInput {
   readonly artifactId: string;
