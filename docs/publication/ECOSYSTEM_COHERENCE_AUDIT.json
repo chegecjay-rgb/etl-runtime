@@ -1,0 +1,63 @@
+{
+  "files_scanned": [
+    "/home/cjay/etl-phase2-foundation/reviewer/ECOSYSTEM_OVERVIEW.md",
+    "/home/cjay/etl-phase2-foundation/reviewer/REVIEWER_ONBOARDING_FLOW.md",
+    "/home/cjay/etl-phase2-foundation/reviewer/REPLAY_REVIEW_GUIDE.md",
+    "/home/cjay/etl-phase2-foundation/reviewer/REVIEWER_NAVIGATION.json",
+    "/home/cjay/etl-phase2-foundation/readme-normalization/proof-of-operation-retrofits_README_TEMPLATE.md",
+    "/home/cjay/etl-phase2-foundation/readme-normalization/etl-runtime_README_TEMPLATE.md",
+    "/home/cjay/etl-phase2-foundation/readme-normalization/proof-of-operation_README_TEMPLATE.md",
+    "/home/cjay/etl-phase2-foundation/readme-normalization/README_NORMALIZATION_STATUS.json",
+    "/home/cjay/etl-phase2-foundation/readme-normalization/protocol-control-disclosure_README_TEMPLATE.md",
+    "/home/cjay/etl-phase2-foundation/specifications/GRAPH_FREEZE_DRAFT.md",
+    "/home/cjay/etl-phase2-foundation/specifications/VERIFIER_FREEZE_DRAFT.md",
+    "/home/cjay/etl-phase2-foundation/specifications/POO_V1_1_FREEZE_DRAFT.md",
+    "/home/cjay/etl-phase2-foundation/specifications/ETNL_FREEZE_DRAFT.md",
+    "/home/cjay/etl-phase2-foundation/specifications/ERC8241_FREEZE_DRAFT.md"
+  ],
+  "validated_files": [
+    "/home/cjay/etl-phase2-foundation/reviewer/REVIEWER_ONBOARDING_FLOW.md",
+    "/home/cjay/etl-phase2-foundation/reviewer/REVIEWER_NAVIGATION.json",
+    "/home/cjay/etl-phase2-foundation/readme-normalization/proof-of-operation-retrofits_README_TEMPLATE.md",
+    "/home/cjay/etl-phase2-foundation/readme-normalization/etl-runtime_README_TEMPLATE.md",
+    "/home/cjay/etl-phase2-foundation/readme-normalization/proof-of-operation_README_TEMPLATE.md",
+    "/home/cjay/etl-phase2-foundation/readme-normalization/README_NORMALIZATION_STATUS.json",
+    "/home/cjay/etl-phase2-foundation/readme-normalization/protocol-control-disclosure_README_TEMPLATE.md",
+    "/home/cjay/etl-phase2-foundation/specifications/GRAPH_FREEZE_DRAFT.md",
+    "/home/cjay/etl-phase2-foundation/specifications/VERIFIER_FREEZE_DRAFT.md",
+    "/home/cjay/etl-phase2-foundation/specifications/POO_V1_1_FREEZE_DRAFT.md",
+    "/home/cjay/etl-phase2-foundation/specifications/ETNL_FREEZE_DRAFT.md",
+    "/home/cjay/etl-phase2-foundation/specifications/ERC8241_FREEZE_DRAFT.md"
+  ],
+  "failures": [
+    {
+      "file": "/home/cjay/etl-phase2-foundation/reviewer/ECOSYSTEM_OVERVIEW.md",
+      "missing": [
+        "probabilistic inference"
+      ]
+    },
+    {
+      "file": "/home/cjay/etl-phase2-foundation/reviewer/REPLAY_REVIEW_GUIDE.md",
+      "missing": [
+        "replay-safe"
+      ]
+    }
+  ],
+  "required_terms": [
+    "deterministic",
+    "replay-safe",
+    "machine-checkable",
+    "bounded",
+    "Explicit Non-Goals"
+  ],
+  "required_non_goals": [
+    "AI governance",
+    "exploit prediction",
+    "trust scoring",
+    "probabilistic inference",
+    "adaptive verification",
+    "autonomous enforcement",
+    "semantic arbitration"
+  ],
+  "runtime_expansion_detected": false
+}

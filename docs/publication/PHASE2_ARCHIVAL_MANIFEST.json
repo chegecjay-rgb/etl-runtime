@@ -1,0 +1,128 @@
+{
+  "phase": "PHASE_2_PUBLICATION_STABILIZATION",
+  "publication_ready": true,
+  "runtime_expansion_detected": false,
+  "tracked_artifacts": [
+    {
+      "path": "/home/cjay/etl-phase2-foundation/specifications/ERC8241_FREEZE_DRAFT.md",
+      "sha256": "d946a8b175ecb4f9d516ca97d2be1c2179af71f16c2273e5f3068d4cf394ce8f",
+      "size_bytes": 1851
+    },
+    {
+      "path": "/home/cjay/etl-phase2-foundation/specifications/ETNL_FREEZE_DRAFT.md",
+      "sha256": "b479107d726d7f6703dade362d83001021d2279e5d8f45e42c0e635473e2819b",
+      "size_bytes": 1841
+    },
+    {
+      "path": "/home/cjay/etl-phase2-foundation/specifications/GRAPH_FREEZE_DRAFT.md",
+      "sha256": "3a4ed46e2a08c75a90b841dce7f5a96193d938a4abc5d38b23b47429aaa4e24b",
+      "size_bytes": 1846
+    },
+    {
+      "path": "/home/cjay/etl-phase2-foundation/specifications/POO_V1_1_FREEZE_DRAFT.md",
+      "sha256": "23e0439549d6514c9272ba5e2165bd4d30c6579c8211bd589ff475438bfae209",
+      "size_bytes": 1843
+    },
+    {
+      "path": "/home/cjay/etl-phase2-foundation/specifications/VERIFIER_FREEZE_DRAFT.md",
+      "sha256": "4c0bd2848a70faf4d2b96bb782fc04744cfee93f5858ccdac2b5eddcc86bd755",
+      "size_bytes": 1849
+    },
+    {
+      "path": "/home/cjay/etl-phase2-foundation/reviewer/ECOSYSTEM_OVERVIEW.md",
+      "sha256": "3d1af4b122c399bf9aa39da8f12d1807551314bbf3decf453de099c018946e8e",
+      "size_bytes": 1292
+    },
+    {
+      "path": "/home/cjay/etl-phase2-foundation/reviewer/REPLAY_REVIEW_GUIDE.md",
+      "sha256": "df7517420502c1fc8b2c8eaa25e24f59d60a6c0d8fd9694760d2bc41a3d3cf52",
+      "size_bytes": 1344
+    },
+    {
+      "path": "/home/cjay/etl-phase2-foundation/reviewer/REVIEWER_NAVIGATION.json",
+      "sha256": "751d0766aa01f5f97eb4bb01b0f35ce93ab029084c1098ca159f28ccba3201fc",
+      "size_bytes": 301
+    },
+    {
+      "path": "/home/cjay/etl-phase2-foundation/reviewer/REVIEWER_ONBOARDING_FLOW.md",
+      "sha256": "ad76c143f3f2a6e1b383b093ef61dc200de38201c2b56691c9e407866744c4e0",
+      "size_bytes": 1434
+    },
+    {
+      "path": "/home/cjay/etl-phase2-foundation/readme-normalization/README_NORMALIZATION_STATUS.json",
+      "sha256": "f9051a4426f437ede4d3f4c98a6484b2ab844e0ae87a6ae014300c4b25fafe3c",
+      "size_bytes": 317
+    },
+    {
+      "path": "/home/cjay/etl-phase2-foundation/readme-normalization/etl-runtime_README_TEMPLATE.md",
+      "sha256": "6735ba94d2bf1e1c46b5a6d2aa964601fb7cca0dd37afb47540a441b8b57ab0e",
+      "size_bytes": 1330
+    },
+    {
+      "path": "/home/cjay/etl-phase2-foundation/readme-normalization/proof-of-operation-retrofits_README_TEMPLATE.md",
+      "sha256": "ad6bd7d75abbda4c09cd7c3ed294ad22cf9c79a35081e2f6ec92fcf7f7fc4749",
+      "size_bytes": 1333
+    },
+    {
+      "path": "/home/cjay/etl-phase2-foundation/readme-normalization/proof-of-operation_README_TEMPLATE.md",
+      "sha256": "a3d80624247516e0a0fc51b33d7fdda73912282bbb88ae8eb9a52b40ab3d8609",
+      "size_bytes": 1326
+    },
+    {
+      "path": "/home/cjay/etl-phase2-foundation/readme-normalization/protocol-control-disclosure_README_TEMPLATE.md",
+      "sha256": "8c7117d4e41e74327d486442d2279e419667c24324d23304e0c4446830fba5a0",
+      "size_bytes": 1333
+    },
+    {
+      "path": "/home/cjay/etl-phase2-foundation/diagrams/DIAGRAM_RENDERING_RULES.json",
+      "sha256": "f1bbb67555dec80ea8a16ec2d5ef4b2320895a1ad6400923410c45087c8a7330",
+      "size_bytes": 451
+    },
+    {
+      "path": "/home/cjay/etl-phase2-foundation/diagrams/FULL_ETL_STACK.mmd",
+      "sha256": "a6a91c50e6dd79ccec50d3c7b1b32c05d7a9661e829a4a8c21f20eda05e847c0",
+      "size_bytes": 278
+    },
+    {
+      "path": "/home/cjay/etl-phase2-foundation/diagrams/GOVERNANCE_CONTINUITY.mmd",
+      "sha256": "945a1e92a2032ac23f950774baf7df2bdd5dadedc370d5ab3a72d503133178df",
+      "size_bytes": 156
+    },
+    {
+      "path": "/home/cjay/etl-phase2-foundation/diagrams/GRAPH_RECONSTRUCTION.mmd",
+      "sha256": "3d403b9496b51374182cf5d96231db068252688db6cff8648f3a00efeb9d6c7a",
+      "size_bytes": 151
+    },
+    {
+      "path": "/home/cjay/etl-phase2-foundation/diagrams/REPLAY_EQUIVALENCE_FLOW.mmd",
+      "sha256": "189db5268c01aa7d5999eb072e325bcdef8148550a609c28114b39edf2350f14",
+      "size_bytes": 181
+    },
+    {
+      "path": "/home/cjay/etl-phase2-foundation/diagrams/REPLAY_LIFECYCLE.mmd",
+      "sha256": "7d17d6a75f4e6b7f78c9b3210b986c484b5d32c1354daa89afd1a8546f7860d9",
+      "size_bytes": 184
+    },
+    {
+      "path": "/home/cjay/etl-phase2-foundation/diagrams/SEMANTIC_DECLARATION_FLOW.mmd",
+      "sha256": "3a0d79b9a02c53869eb926c80be5acdd4217c950b026776d284ed1f7885bfc4c",
+      "size_bytes": 161
+    },
+    {
+      "path": "/home/cjay/etl-phase2-foundation/diagrams/VERIFIER_PIPELINE.mmd",
+      "sha256": "6b7d8c66fb38bb0689917b26b8d567b0d10e6c740d111330503a0756dc3b66e5",
+      "size_bytes": 152
+    },
+    {
+      "path": "/home/cjay/etl-phase2-foundation/coherence-audit/ECOSYSTEM_COHERENCE_AUDIT.json",
+      "sha256": "90c24d6305bfff6e6f9bc9a798755fb12247b14294cdc021dc8eec06b3668348",
+      "size_bytes": 2993
+    },
+    {
+      "path": "/home/cjay/etl-phase2-foundation/coherence-audit/PUBLICATION_FREEZE_STATUS.json",
+      "sha256": "bef5376429d861fe75d8ab2323627e05f4ee0536e82185727fe104f24814bbe7",
+      "size_bytes": 122
+    }
+  ],
+  "artifact_count": 24
+}
